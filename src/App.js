@@ -1,8 +1,8 @@
 import React from 'react';
 import { Gradient } from 'react-gradient';
-import ReactAudioPlayer from 'react-audio-player';
 import Popup from "reactjs-popup";
-import Iframe from 'react-iframe'
+import ReactPlayer from 'react-player'
+import MultiPlayer from './Player'
 import './App.css';
 
 var gradients = [
@@ -164,25 +164,30 @@ class App extends React.Component {
        </Popup>
         </div>
         </header>
-        <body className = "App-body">
-          <ReactAudioPlayer
-            src={{uri:"https://stream.radiojar.com/mw1xsf0dpnruv"}}
-            autoPlay = "true"
-            controls = "true"
-        />
 
-    
-    <div>
-      <div  className="murmur" >
-  
-          <p >MURMUR BOX</p>
-          
-          <iframe  src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>	
+
+        <body className = "App-body">
+        <MultiPlayer
+        urls={[
+          'www.radiojar.com/widget/radio/mw1xsf0dpnruv/player/?trackinfo',
+
+        ]}
+      
+        />
+        <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
+
         
-        </div>
+        <div>
+          <div  className="murmur" >
+      
+              <p >MURMUR BOX</p>
+              
+              <iframe  src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>	
+            
+            </div>
+              
           
-       
-  </div>
+      </div>
         </body>
         <footer className="App-footer">
         <p id="footerText" color = {this.state.color2}>© 2020, Lemoni Radio </p>
