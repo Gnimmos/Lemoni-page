@@ -13,7 +13,8 @@
     "react-iframe": "^1.8.0",
     "react-player": "^2.6.0",
     "react-scripts": "3.4.1",
-    "reactjs-popup": "^1.5.0"
+    "reactjs-popup": "^1.5.0",
+    "semantic-ui-component": "0.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

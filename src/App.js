@@ -169,7 +169,7 @@ class App extends React.Component {
         <body className = "App-body">
         <MultiPlayer
         urls={[
-          'www.radiojar.com/widget/radio/mw1xsf0dpnruv/player/?trackinfo',
+          'https://stream.radiojar.com/mw1xsf0dpnruv',
 
         ]}
       
