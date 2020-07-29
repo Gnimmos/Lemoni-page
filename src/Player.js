@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Controls from './control'
+import InputSlider from './volume'
 import './Player.css';
+
 
 const useMultiAudio = urls => {
   const [sources] = useState(
@@ -78,7 +80,9 @@ const MultiPlayer = ({ urls }) => {
 const Player = ({ player, toggle }) => (
   <div>
     <p>Stream URL: {player.url}</p>
+    <InputSlider/>
     <button className ="playbutt" style={{height: '30px', width : '30px'}} variant="outline-light" onClick={toggle}>{player.playing ? <Controls/> : <Controls/>}</button>
+    
   </div>
 )
 
