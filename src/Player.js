@@ -1,91 +1,65 @@
-import React, { useState, useEffect } from 'react'
+import React, { Component } from 'react'
 import Controls from './control'
-import InputSlider from './volume'
+import { Slider } from 'react-semantic-ui-range'
 import './Player.css';
+import Display from './Display'
 
 
-const useMultiAudio = urls => {
-  const [sources] = useState(
-    urls.map(url => {
-      return {
-        url,
-        audio: new Audio(url),
-      }
-    }),
-  )
 
-  const [players, setPlayers] = useState(
-    urls.map(url => {
-      return {
-        url,
-        playing: false,
-      }
-    }),
-  )
+class Player extends React.Component {
+  state = {
+    play: false,
+    volume: 0.5,
+    min:0.0,
+    max:1.0,
+  }
+  url = "https://stream.radiojar.com/mw1xsf0dpnruv";
 
-  const toggle = targetIndex => () => {
-    const newPlayers = [...players]
-    const currentIndex = players.findIndex(p => p.playing === true)
-    if (currentIndex !== -1 && currentIndex !== targetIndex) {
-      newPlayers[currentIndex].playing = false
-      newPlayers[targetIndex].playing = true
-    } else if (currentIndex !== -1) {
-      newPlayers[targetIndex].playing = false
-    } else {
-      newPlayers[targetIndex].playing = true
-    }
-    setPlayers(newPlayers)
+  audio = new Audio(this.url)
+
+  componentDidMount() {
+    this.audio.addEventListener('ended', () => this.setState({ play: false }));
   }
 
-  useEffect(() => {
-    sources.forEach((source, i) => {
-      players[i].playing ? source.audio.play() : source.audio.pause()
-    })
-  }, [sources, players])
+  componentWillUnmount() {
+    this.audio.removeEventListener('ended', () => this.setState({ play: false }));  
+  }
 
-  useEffect(() => {
-    sources.forEach((source, i) => {
-      source.audio.addEventListener('ended', () => {
-        const newPlayers = [...players]
-        newPlayers[i].playing = false
-        setPlayers(newPlayers)
-      })
+  togglePlay = () => {
+    this.setState({ play: !this.state.play }, () => {
+      this.state.play ? this.audio.play() : this.audio.pause();
+    });
+  }
+  handleOnChange = (value) => {
+    this.setState({
+      volume: value
     })
-    return () => {
-      sources.forEach((source, i) => {
-        source.audio.removeEventListener('ended', () => {
-          const newPlayers = [...players]
-          newPlayers[i].playing = false
-          setPlayers(newPlayers)
-        })
-      })
-    }
-  }, [])
+    this.toggleVolume();
+  }
+  toggleVolume = () =>{
+    this.audio.volume = this.state.volume
 
-  return [players, toggle]
+  }
+
+  render() {
+    let { volume } = this.state
+
+    return (
+      <div>
+        <Display/>
+        <button onClick={this.togglePlay}>{this.state.play ?  <Controls/> : <Controls/>}</button>
+        <Slider 
+        settings={{
+          start: 0.5,
+          min: this.state.min,
+          max: this.state.max,
+          step: 0.1,
+        onChange: this.handleOnChange
+        
+          }}  />
+      </div>
+    );
+  }
 }
 
-const MultiPlayer = ({ urls }) => {
-  const [players, toggle] = useMultiAudio(urls)
-
-  return (
-    <div>
-      {players.map((player, i) => (
-        <Player key={i} player={player} toggle={toggle(i)} />
-      ))}
-    </div>
-  )
-}
-
-const Player = ({ player, toggle }) => (
-  <div>
-    <p>Stream URL: {player.url}</p>
-    <InputSlider/>
-    <button className ="playbutt" style={{height: '30px', width : '30px'}} variant="outline-light" onClick={toggle}>{player.playing ? <Controls/> : <Controls/>}</button>
-    
-  </div>
-)
-
-
-
-export default MultiPlayer
+export default Player;

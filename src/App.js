@@ -2,7 +2,7 @@ import React from 'react';
 import { Gradient } from 'react-gradient';
 import Popup from "reactjs-popup";
 import ReactPlayer from 'react-player'
-import MultiPlayer from './Player'
+import Player from './Player'
 import './App.css';
 
 var gradients = [
@@ -167,13 +167,7 @@ class App extends React.Component {
 
 
         <body className = "App-body">
-        <MultiPlayer
-        urls={[
-          'https://stream.radiojar.com/mw1xsf0dpnruv',
-
-        ]}
-      
-        />
+        <Player/>
         <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
 
         
