@@ -4,13 +4,10 @@ import Popup from "reactjs-popup";
 import ReactPlayer from 'react-player'
 import Player from './Player'
 import './App.css';
+import logo from './lemonilogoTR3.png'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-var gradients = [
-  ['#0e2539', '#7f4098'],
-  ['#5eb546', '#fde146'],
-  ['#d47097', '#76cdd9'],
-  ['#ec7323', '#be1e2d'],
-];
+
 
 class App extends React.Component {
     //changing backrounds
@@ -20,12 +17,16 @@ class App extends React.Component {
     
       this.state = {
           color1: '#0e2539',
-          color2: '#7f4098'
+          color2: '#7f4098',
+          changeback :"App",
     
       };
        //binding the functions to the class
   this.change1 = this.change1.bind(this);
   this.change2 = this.change2.bind(this);
+  this.change = this.change.bind(this);
+  this.scrollToTop = this.scrollToTop.bind(this);
+
 }
     change1 (){
       var hours = new Date().getHours(); //Current Hours
@@ -54,9 +55,11 @@ class App extends React.Component {
       else 
       {
         this.setState({ 
-          color2: '#ec7323'
+          color2: '#ec7323'      
+
         });
       }
+      console.log(this.state.color2)
     }
     change2 (){
       var hours = new Date().getHours(); //Current Hours
@@ -87,6 +90,78 @@ class App extends React.Component {
           color1: '#be1e2d'
         });
       }
+      console.log(this.state.color1)
+
+    }
+    change(){
+
+      var hours = new Date().getHours(); //Current Hours
+      var hour = hours.toString();
+      //Setting colors dipenting on time
+      if (0 <= hour && hour < 6)
+      { 
+        this.setState({ 
+          changeback:"App-1"
+        
+      });
+      }
+      else if (6 <= hour && hour < 12)
+      {
+        this.setState({ 
+          changeback:"App-2"
+        });
+         
+      }
+      else if (12 <= hour && hour < 18)
+      {
+        this.setState({ 
+          changeback:"App-3"
+        });
+      }
+      else 
+      {
+        this.setState({ 
+          changeback:"App-4"
+        });
+      }
+      console.log(this.state.color2)
+    }
+    
+
+    scrollToTop() {
+      scroll.scrollToTop();
+    }
+    scrollTo() {
+      scroller.scrollTo('scroll-to-element', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      })
+    }
+    scrollToWithContainer() {
+
+      let goToContainer = new Promise((resolve, reject) => {
+  
+        Events.scrollEvent.register('end', () => {
+          resolve();
+          Events.scrollEvent.remove('end');
+        });
+  
+        scroller.scrollTo('scroll-container', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        });
+  
+      });
+  
+      goToContainer.then(() =>
+        scroller.scrollTo('scroll-container-second-element', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+          containerId: 'scroll-container'
+        }));
     }
     //refresing the clock
     componentDidMount() {
@@ -98,30 +173,43 @@ class App extends React.Component {
         () => this.change2(),
         1000
       );
+      this.timerID = setInterval(
+        () => this.change(),
+        1000
+      );
+      Events.scrollEvent.register('begin', function () {
+        console.log("begin", arguments);
+      });
+  
+      Events.scrollEvent.register('end', function () {
+        console.log("end", arguments);
+      });
+    }
+    componentWillUnmount() {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+      this.change1();
+      this.change2();
     }
   
   render(){
+    
+    console.log(this.state.color1);
     return (
-      <div className="App">
-          <Gradient
-                gradients={ gradients } // required
-                property="background"
-                gradientType	= "linear"
-                duration={ 3000 }
-                angle="90deg"
-            >
-        <header className="App-header" color = {this.state.color2}>
-        <div className="Content">
-          <h1 >Lemoni Radio</h1>
+      <div className={this.state.changeback} >
+
+        <header className="App-header" >
+        <div  style={{background:this.state.changeback}} className="Content">
+        <img className = "App-logo"style={{picturecolor:this.state.color2}} src={logo} alt="Logo" />
         </div>
         <div className="Menubar">
-        <Popup trigger={<button variant="outline-primary"> About</button>}
+        <Popup trigger={<button style={{color:this.state.color2}} className="about"> About</button>}
         position="right center" 
         modal
         closeOnDocumentClick>
           <div>
-            <h2>ABOUT LEMONI RADIO</h2>
-            
+
+            <Element style={{color:this.state.color2}}>ABOUT LEMONI RADIO            
 
 
 
@@ -141,25 +229,42 @@ class App extends React.Component {
             Πότε θα βγούμε από το TEST MODE
             Όταν αυτό που θα έχουμε να προσφέρουμε στους ακροατές , θα είναι όπως το φανταστήκαμε.
 
+          </Element>
           </div>
        </Popup>
-       <Popup trigger={<button backroung = "transparent"> Support</button>}
+       <Popup trigger={<button className="support" style={{color:this.state.color2}}> Support</button>}
         position="right center" 
         modal
         closeOnDocumentClick>
           <div>
-            <h2>ABOUT LEMONI RADIO</h2>
+            <h2 style={{color:this.state.color2}}>ABOUT LEMONI RADIO</h2>
             Do something to support
 
           </div>
        </Popup>
-       <Popup trigger={<button> Contact</button>}
+       <Popup trigger={<button className="contact" style={{color:this.state.color2}}> Contact</button>}
         position="right center" 
         modal
         closeOnDocumentClick>
           <div>
-            <h2>Contact</h2>
-            
+            <h2 style={{color:this.state.color2}}>Contact</h2>
+            <div class="modal-content container" style={{color:this.state.color2}}>
+                <h1>CONTACT LEMONI RADIO</h1>
+                <p>hello@lemoniradio.com</p>
+                <p></p>
+                <p></p>
+                <h1>TALK TO US!</h1>
+                <form  className="contact-form" action="contactform.php" method="POST">
+                  <input type="text" name="name"  placeholder="NAME" class="blockclass input-txt"/>
+                  <input type="email" name="email" placeholder="EMAIL" class="blockclass input-txt"/>
+                  <textarea name="message" id="" cols="30" rows="10" placeholder="MESSAGE" class="blockclass input-txt"></textarea>
+                  <button type="submit" name="submit" class="blockclass">Submit</button>
+
+                </form>
+
+
+
+              </div>
          </div>
        </Popup>
         </div>
@@ -167,14 +272,22 @@ class App extends React.Component {
 
 
         <body className = "App-body">
-        <Player/>
-        <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
+        <Popup trigger={<button className="support" style={{color:this.state.color2}}> live</button>}
+        position="right center" 
+        modal
+        closeOnDocumentClick>
+          <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
+            <h2 style={{color:this.state.color2}}>Live</h2>
+            <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
 
-        
+          </div>
+       </Popup>
+        <Player style={{color:this.state.color2}}/>
+
         <div>
-          <div  className="murmur" >
+          <div  style={{color:this.state.color2}} className="murmur" style = {{marginleft: '45', margintop: '-25%'}} >
       
-              <p >MURMUR BOX</p>
+              <p style={{color:this.state.color2}}>MURMUR BOX</p>
               
               <iframe  src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>	
             
@@ -183,11 +296,12 @@ class App extends React.Component {
           
       </div>
         </body>
+
+
         <footer className="App-footer">
-        <p id="footerText" color = {this.state.color2}>© 2020, Lemoni Radio </p>
+        <p id="footerText"style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
         
       </footer>
-      </Gradient>
       </div>
     );
   }

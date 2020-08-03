@@ -17,6 +17,7 @@
     "react-player": "^2.6.0",
     "react-rangeslider": "^2.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.8.0",
     "react-semantic-ui-range": "^0.7.0",
     "reactjs-popup": "^1.5.0",
     "semantic-ui-component": "0.0.7"

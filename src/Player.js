@@ -42,13 +42,24 @@ class Player extends React.Component {
   }
 
   render() {
-    let { volume } = this.state
-
+    const mystyle = {
+      color: "white",
+      backgroundColor: "DodgerBlue",
+      padding: "10px",
+      fontFamily: "Arial",
+      width:"500px",
+      height: "300px"
+    };
+    const volu = {
+      width:"100px",
+      aligment:"bottom"
+    };
     return (
-      <div>
+      <div style = {mystyle } className = "playercontainer">
         <Display/>
-        <button onClick={this.togglePlay}>{this.state.play ?  <Controls/> : <Controls/>}</button>
-        <Slider 
+        <button className = "playbutt" onClick={this.togglePlay}>{this.state.play ?  <Controls/> : <Controls/>}</button>
+        <Slider style = {volu}
+        className ="vol"
         settings={{
           start: 0.5,
           min: this.state.min,
