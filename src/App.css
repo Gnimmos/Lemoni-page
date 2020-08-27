@@ -28,6 +28,23 @@
 
 }
 
+.blockclass {
+  display: block;
+}
+form.contact-form{
+  width: 100%;
+}
+input.blockclass{
+  width: inherit;
+  margin-top: 1%
+}
+textarea.blockclass{
+  width: inherit;
+  margin-top: 1%
+}
+button.blockclass{
+  margin-top: 1%
+}
 
 
 
@@ -59,10 +76,13 @@
   border: none;
   min-height:75vh;
   display: flex;
-  flex-direction: left;
-  align-items: bottom;
-  justify-content: left;
+
   font-size: calc(10px + 2vmin);
+}.support{
+  background-color: transparent;
+  border-color: transparent;
+  width: 30px;
+  height: 30px;
 }
 .Menubar{
   flex-direction: right;
@@ -73,6 +93,7 @@
   font-size: calc(10px + 2vmin);
   left:45%;
 }
+
 
 .Menubar .about{
   border: none;
@@ -87,6 +108,12 @@
 .Menubar .contact{
   border: none;
   background-color: transparent;
+}
+
+.murmur{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 @keyframes App-logo-spin {
   from {
@@ -112,6 +139,6 @@
     position:relative;
     align-items: bottom;
     font-size: calc(10px + 2vmin);
-    left:45%;
+    right:45%;
 }
 }

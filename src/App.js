@@ -1,11 +1,10 @@
 import React from 'react';
-import { Gradient } from 'react-gradient';
 import Popup from "reactjs-popup";
-import ReactPlayer from 'react-player'
 import Player from './Player'
 import './App.css';
 import logo from './lemonilogoTR3.png'
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 
 
@@ -59,7 +58,6 @@ class App extends React.Component {
 
         });
       }
-      console.log(this.state.color2)
     }
     change2 (){
       var hours = new Date().getHours(); //Current Hours
@@ -90,7 +88,6 @@ class App extends React.Component {
           color1: '#be1e2d'
         });
       }
-      console.log(this.state.color1)
 
     }
     change(){
@@ -124,7 +121,6 @@ class App extends React.Component {
           changeback:"App-4"
         });
       }
-      console.log(this.state.color2)
     }
     
 
@@ -193,9 +189,7 @@ class App extends React.Component {
     }
   
   render(){
-    
-    console.log(this.state.color1);
-    return (
+        return (
       <div className={this.state.changeback} >
 
         <header className="App-header" >
@@ -247,10 +241,8 @@ class App extends React.Component {
         modal
         closeOnDocumentClick>
           <div>
-            <h2 style={{color:this.state.color2}}>Contact</h2>
             <div class="modal-content container" style={{color:this.state.color2}}>
                 <h1>CONTACT LEMONI RADIO</h1>
-                <p>hello@lemoniradio.com</p>
                 <p></p>
                 <p></p>
                 <h1>TALK TO US!</h1>
@@ -272,24 +264,17 @@ class App extends React.Component {
 
 
         <body className = "App-body">
-        <Popup trigger={<button className="support" style={{color:this.state.color2}}> live</button>}
-        position="right center" 
-        modal
-        closeOnDocumentClick>
-          <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
-            <h2 style={{color:this.state.color2}}>Live</h2>
-            <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
 
-          </div>
-       </Popup>
-        <Player style={{color:this.state.color2}}/>
+        <Player style={{color:this.state.color2}}>
+
+        </Player>
 
         <div>
-          <div  style={{color:this.state.color2}} className="murmur" style = {{marginleft: '45', margintop: '-25%'}} >
+          <div  style={{color:this.state.color2}} className="murmur"  >
       
               <p style={{color:this.state.color2}}>MURMUR BOX</p>
               
-              <iframe  src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>	
+              <iframe  src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" ></iframe>	
             
             </div>
               

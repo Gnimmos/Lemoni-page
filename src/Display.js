@@ -13,7 +13,8 @@ class Display extends Component{
             error: null,
       isLoaded: false,
       items: [],
-      color2: '#7f4098'
+      color2: '#7f4098',
+      zone:"",
 
         };
         this.change2 = this.change2.bind(this);
@@ -49,6 +50,9 @@ class Display extends Component{
           this.setState({ 
             color1: '#7f4098'
           });
+          this.setState({
+            zone:"Depp Zone"
+          });
         }
         else if (6 <= hour && hour < 12)
         {
@@ -56,17 +60,26 @@ class Display extends Component{
             
             color1: '#fde146'
           });
+          this.setState({
+            zone:"Energetic Zone"
+          });
         }
         else if (12 <= hour && hour < 18)
         {
           this.setState({ 
             color1: '#76cdd9'
           });
+          this.setState({
+            zone:"Mellow Zone"
+          });
         }
         else 
         {
           this.setState({ 
             color1: '#be1e2d'
+          });
+          this.setState({
+            zone:"Twilight Zone"
           });
         }
         console.log(this.state.color1)
@@ -88,10 +101,12 @@ class Display extends Component{
       render() {
         const { error, isLoaded, songs } = this.state;
         const colosr = {
-          padding: "2px",
+          padding: "1px",
           fontSize: 16,
-          fontFamily: "Cochin"        
+          fontFamily: "Arial"  
+                
         };
+
         if (error) {
           return <div style={{color:this.state.color2},colosr}>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -103,9 +118,10 @@ class Display extends Component{
             <ul>
               {
                 <div style = {colosr } key={songs.title}>
-                 <p style={{color:this.state.color2},colosr}>Title:</p> {songs.title} 
-                 <p style={{color:this.state.color2},colosr}>Artist:</p>{songs.artist}
-                 <p style={{color:this.state.color2},colosr}>Ablum:</p>{songs.album}
+                 <h1 style={{color:this.state.color2},colosr}>{this.state.zone}</h1>
+                 <h1 style={{color:this.state.color2},colosr}>{}</h1>
+                 <p style={{color:this.state.color2},colosr}>Artist: {songs.artist}</p>
+                 <p style={{color:this.state.color2},colosr}>Title: {songs.title}</p>
                 </div>
               }
             </ul>

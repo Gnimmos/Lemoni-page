@@ -1,0 +1,11 @@
+.player{
+    height: 30px;
+    width : 30px;
+}
+.pause{
+    fill: yellow !important;
+    
+}
+.play{
+    fill: yellow !important;
+}
