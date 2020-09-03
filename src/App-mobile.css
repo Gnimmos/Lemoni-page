@@ -100,32 +100,22 @@ button.blockclass{
 }
  .about{
   border: none;
-  background-color: black;
+  background-color: transparent;
   margin-left: 10%;
-  overflow-y: scroll;
-
-}
-.aboutlemoni{  
-  border: none;
-  background-color: black;
-  margin-left: 10%;
-  overflow-y: scroll;
 
 }
 
  .support{
   border: none;
-  background-color: black;
+  background-color: transparent;
   margin-left: 10%;
-  overflow-y: scroll;
 
 }
 
  .contact{
   border: none;
-  background-color: black;
+  background-color: transparent;
   margin-left: 10%;
-  overflow-y: scroll;
 
 }
 

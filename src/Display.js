@@ -108,7 +108,7 @@ class Display extends Component{
         };
 
         if (error) {
-          return <div style={{color:this.state.color2},colosr}>Error: {error.message}</div>;
+          return <div style={{color:this.state.color2}, colosr}>Error: {error.message}</div>;
         } else if (!isLoaded) {
         return <div style={{color:this.state.color2},colosr}>Loading...</div>;
         }  else if (!songs){

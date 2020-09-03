@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Slider } from 'react-semantic-ui-range'
 import './Player.css';
 import Display from './Display'
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import volumeOff from '@iconify/icons-cil/volume-off';
 import volumeHigh from '@iconify/icons-cil/volume-high';
 import ReactPlayer from 'react-player'
@@ -65,7 +65,7 @@ class Player extends React.Component {
   toggleVolume = () =>{
     this.audio.volume = this.state.volume
     console.log(this.state.volume)
-    if(this.state.volume ==0.1){
+    if(this.state.volume ===0.1){
       this.audio.muted=true;
     }
     else{

@@ -5,22 +5,34 @@
     font-family: "Arial";
     width:"500px";
     height: "300px";
+    align-items: flex;
 }
 .playbutt{
     background: transparent;
     border-color: transparent;
     align-self: start;
+    margin-right: 10%;
+
     width: 30px;
     height: 30px;
+    
 
 }
 .vol{
     background: transparent;
     border-color: transparent;
+    margin-right: 10%;
+
+    width: 30px;
+    height: 30px;
+
 }
 .support{
     background-color: transparent;
     border-color: transparent;
     width: 30px;
     height: 30px;
+    
+    margin-right: 10%;
+
   }
