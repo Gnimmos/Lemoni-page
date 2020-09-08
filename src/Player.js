@@ -22,8 +22,11 @@ class Player extends React.Component {
     mute:false, 
     unmute:true,   
     isHovering: false,
+    color:"playercontainer-1",
   };
   handleMouseHover = this.handleMouseHover.bind(this);
+  change = this.change.bind(this);
+
   //radiojar url for mp3 streaming 
   url = "https://stream.radiojar.com/mw1xsf0dpnruv";
   
@@ -42,6 +45,10 @@ class Player extends React.Component {
 
   componentDidMount() {
     this.audio.addEventListener('ended', () => this.setState({ play: false }));
+    this.timerID = setInterval(
+      () => this.change(),
+      1000
+    );
   }
 
   componentWillUnmount() {
@@ -84,7 +91,38 @@ class Player extends React.Component {
 
     this.audio.muted = this.state.mute
   }
+  change (){
+    var hours = new Date().getHours(); //Current Hours
+    var hour = hours.toString();
+    //Setting colors dipenting on time
+    if (0 <= hour && hour < 6)
+    { 
+      this.setState({ 
+       color:"playercontainer-1"
+      });
+    }
+    else if (6 <= hour && hour < 12)
+    {
+      this.setState({ 
+        
+        color:"playercontainer-2"
+      });
+    }
+    else if (12 <= hour && hour < 18)
+    {
+      this.setState({ 
+        color:"playercontainer-3"
+      });
+    }
+    else 
+    {
+      this.setState({ 
+        color:"playercontainer-4"
+      });
+    }
+    console.log(this.state.color1)
 
+  }
   
 
   render() {
@@ -94,15 +132,15 @@ class Player extends React.Component {
       aligment:"bottom"
     };
     return (
-      <div  className = "playercontainer">
+      <div  className =  {this.state.color}>
 
         {/* Display the metadate from class */}
         <Display/>
   
         {/* toggle play and pause on click and show icons */}
-        <button className = "playbutt" onClick={this.togglePlay}>{this.state.play ?  <Icon icon={playPauseO}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
+        <button className = "playbutt" onClick={this.togglePlay } style={{color:this.state.color1}}>{this.state.play ?  <Icon icon={playPauseO}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
         {/* pop up window for video live stream */}
-        <Popup trigger={<button className="support" style={{color:this.state.color1}} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
+        <Popup trigger={<button className="twitch" style={{color:this.state.color1}} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
             position="right center" 
             modal
             closeOnDocumentClick>
@@ -113,7 +151,7 @@ class Player extends React.Component {
         </Popup>
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
         delay the hover of muse disapear over the colume button so the bar is does not immidietly hide */}
-        <button className ="vol" onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute() } >
+        <button className ="vol" style={{color:this.state.color1}} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute() } >
           {this.state.mute ?<Icon icon={volumeOff} width="30" height="30"/>: <Icon icon={volumeHigh} width="30" height="30" /> }
           </button>
         {

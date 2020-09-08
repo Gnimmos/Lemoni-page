@@ -1,30 +1,51 @@
+@font-face {
+  font-family: 'SF';
+  src: local('Sf'), url(./SF.otf) format('otf');
+}
 .App-1 {
     text-align: left;
-    background:linear-gradient(90deg,#0e2539,#7f4098);
+    background: linear-gradient(90deg,#7f4098,#0e2539);
   }
   .App-2 {
     text-align: left;
-    background:linear-gradient(90deg,#5eb546,#fde146);
+    background: linear-gradient(90deg,#fde146,#5eb546);
   }
   .App-3 {
     text-align: left;
-    background:linear-gradient(90deg,#d47097,#76cdd9);
+    background: linear-gradient(90deg,#76cdd9,#d47097);
   }
   .App-4 {
     text-align: left;
-    background:linear-gradient(90deg,#be1e2d,#ec7323);
+    background: linear-gradient(90deg,#be1e2d,#ec7323);
   }
   .App {
     text-align: left;
-    background:linear-gradient(90deg,#000000,#000000);
+    background: linear-gradient(90deg,#000000,#000000);
+   }
+
+  .grid-1{
+    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
+    background-size: 60px 60px;  
   }
-  
+  .grid-2{
+    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+  .grid-3{
+    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+  .grid-4{
+    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+
 .Content {
     width:"100px"; 
-  
   }
 .App-logo {
   width:"100px"; 
+  display: grid;
 
 }
 
@@ -45,10 +66,8 @@ textarea.blockclass{
 button.blockclass{
   margin-top: 1%
 }
-
-
-
 .App-header {
+  font-family: 'SF';
   background-color: transparent;
   min-height: 5vh;
   display: flex;
@@ -58,10 +77,8 @@ button.blockclass{
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: #61dafb;
-}
 .App-footer{
+  font-family: 'SF';
   background-color: transparent;
   border: none;
   min-height: 5vh;
@@ -78,61 +95,50 @@ button.blockclass{
   display: flex;
   font-size: calc(10px + 2vmin);
 }
-.support{
-  background-color: transparent;
-  border-color: transparent;
-  width: 30px;
-  height: 30px;
-}
+
 .Menubar{
   flex-direction: right;
   border: none;
-  background-color: transparent;
-  padding: "10px";
   font-family: "Arial";
   position:relative;
   display: flex;
   align-items: flex;
   font-size: calc(10px + 2vmin);
   left:45%;
-  width:"300px";
+  width:40%;
 
+}
+.support{
+  background-color: transparent;
+  border-color: transparent;
+  width: 30px;
+  height: 30px;
+  align-self: auto;
 }
  .about{
-  border: none;
-  background-color: black;
-  margin-left: 10%;
-  overflow-y: scroll;
-
+  background-color: transparent;
+  border-color: transparent;
+  width: 30px;
+  height: 30px;
+  align-self: flex-start;
 }
-.aboutlemoni{  
-  border: none;
+.aboutlemoni .aboutlemon{  
+  background-color: transparent;
+  border-color: transparent;
+  background-attachment: scroll;
   background-color: black;
-  margin-left: 10%;
-  overflow-y: scroll;
-
+  align-self: flex-end;
 }
-
- .support{
-  border: none;
-  background-color: black;
-  margin-left: 10%;
-  overflow-y: scroll;
-
-}
-
- .contact{
-  border: none;
-  background-color: black;
-  margin-left: 10%;
-  overflow-y: scroll;
-
+.contact{
+  background-color: transparent;
+  border-color: transparent;
+  width: 30px;
+  height: 30px;
 }
 
 .murmur {
   display: block;
   margin-right:  -50%;
-
 }
 .murmurcont{
   display: flex;
@@ -146,11 +152,4 @@ button.blockclass{
   margin-right: 100%;
   margin-top: 0%;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

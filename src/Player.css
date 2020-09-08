@@ -1,18 +1,53 @@
-.playercontainer{
-    color: "white";
+@font-face {
+    font-family: 'Trim';
+    src: local('Trim'), url(./Trim.otf) format('Trim');
+  }
+
+.playercontainer-1{
+    color: #0e2539;
+    font-family: 'Trim';
     background-color: transparent;
-    padding: "10px";
+    padding: 10px;
     font-family: "Arial";
-    width:"500px";
-    height: "300px";
-    align-items: flex;
-}
+    width:500px;
+    height: 300px;
+    align-items: left;
+    }
+.playercontainer-2{
+    color: #5eb546;
+    font-family: 'Trim';
+    background-color: transparent;
+    padding: 10px;
+    font-family: "Arial";
+    width:500px;
+    height: 300px;
+    align-items: left;
+    }
+.playercontainer-3{
+    color: #d47097;
+    font-family: 'Trim';
+    background-color: transparent;
+    padding: 10px;
+    font-family: "Arial";
+    width:500px;
+    height: 300px;
+    align-items: left;
+    }
+.playercontainer-4{
+    color: #ec7323;
+    font-family: 'Trim';
+    background-color: transparent;
+    padding: 10px;
+    font-family: "Arial";
+    width:500px;
+    height: 300px;
+    align-items: left;
+    }
 .playbutt{
     background: transparent;
     border-color: transparent;
     align-self: start;
-    margin-right: 10%;
-
+    margin-left: 0%;
     width: 30px;
     height: 30px;
     
@@ -21,18 +56,16 @@
 .vol{
     background: transparent;
     border-color: transparent;
-    margin-right: 10%;
-
+    margin-left: 10%;
     width: 30px;
     height: 30px;
-
 }
-.support{
+.twitch{
     background-color: transparent;
     border-color: transparent;
     width: 30px;
     height: 30px;
     
-    margin-right: 10%;
+    margin-left: 10%;
 
   }
