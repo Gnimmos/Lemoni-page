@@ -102,8 +102,6 @@ class Display extends Component{
         const { error, isLoaded, songs } = this.state;
         const colosr = {
           padding: "1px",
-          fontSize: 16,
-          fontFamily: "Arial"  
                 
         };
 

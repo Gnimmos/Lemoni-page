@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Trim';
-    src: local('Trim'), url(./Trim.otf) format('Trim');
+    src: local('Trim'), url(./Trim.otf) format('otf');
   }
 
 .playercontainer-1{
     color: #0e2539;
     font-family: 'Trim';
+    font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    font-family: "Arial";
     width:500px;
     height: 300px;
     align-items: left;
@@ -16,9 +16,9 @@
 .playercontainer-2{
     color: #5eb546;
     font-family: 'Trim';
+    font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    font-family: "Arial";
     width:500px;
     height: 300px;
     align-items: left;
@@ -26,9 +26,9 @@
 .playercontainer-3{
     color: #d47097;
     font-family: 'Trim';
+    font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    font-family: "Arial";
     width:500px;
     height: 300px;
     align-items: left;
@@ -36,13 +36,20 @@
 .playercontainer-4{
     color: #ec7323;
     font-family: 'Trim';
+    font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    font-family: "Arial";
     width:500px;
     height: 300px;
     align-items: left;
     }
+.adjustdis{
+    margin-left: -6%;
+    margin-top: 6%;
+    font-family: 'Trim';
+    font-size: 15px;
+}
+
 .playbutt{
     background: transparent;
     border-color: transparent;

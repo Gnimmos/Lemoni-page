@@ -10,7 +10,7 @@ import Popup from "reactjs-popup";
 import cameraVideo from '@iconify/icons-bi/camera-video';
 import playIcon from '@iconify/icons-feather/play';
 import playPauseO from '@iconify/icons-gg/play-pause-o';
-
+import Datetime from'react-datetime';
 
 
 class Player extends React.Component {
@@ -22,10 +22,11 @@ class Player extends React.Component {
     mute:false, 
     unmute:true,   
     isHovering: false,
-    color:"playercontainer-1",
+    discolor:"playercontainer-1",
+    
   };
   handleMouseHover = this.handleMouseHover.bind(this);
-  change = this.change.bind(this);
+  changecolor = this.changecolor.bind(this);
 
   //radiojar url for mp3 streaming 
   url = "https://stream.radiojar.com/mw1xsf0dpnruv";
@@ -46,7 +47,7 @@ class Player extends React.Component {
   componentDidMount() {
     this.audio.addEventListener('ended', () => this.setState({ play: false }));
     this.timerID = setInterval(
-      () => this.change(),
+      () => this.changecolor(),
       1000
     );
   }
@@ -91,33 +92,33 @@ class Player extends React.Component {
 
     this.audio.muted = this.state.mute
   }
-  change (){
+  changecolor (){
     var hours = new Date().getHours(); //Current Hours
     var hour = hours.toString();
     //Setting colors dipenting on time
     if (0 <= hour && hour < 6)
     { 
       this.setState({ 
-       color:"playercontainer-1"
+        discolor:"playercontainer-1"
       });
     }
     else if (6 <= hour && hour < 12)
     {
       this.setState({ 
         
-        color:"playercontainer-2"
+        discolor:"playercontainer-2"
       });
     }
     else if (12 <= hour && hour < 18)
     {
       this.setState({ 
-        color:"playercontainer-3"
+        discolor:"playercontainer-3"
       });
     }
     else 
     {
       this.setState({ 
-        color:"playercontainer-4"
+        discolor:"playercontainer-4"
       });
     }
     console.log(this.state.color1)
@@ -132,11 +133,13 @@ class Player extends React.Component {
       aligment:"bottom"
     };
     return (
-      <div  className =  {this.state.color}>
+      <div  className =  {this.state.discolor}>
 
         {/* Display the metadate from class */}
-        <Display/>
-  
+        <div className = "adjustdis" >
+          <Display/>
+        </div>
+        <div className = "adjustcont" >
         {/* toggle play and pause on click and show icons */}
         <button className = "playbutt" onClick={this.togglePlay } style={{color:this.state.color1}}>{this.state.play ?  <Icon icon={playPauseO}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
         {/* pop up window for video live stream */}
@@ -167,7 +170,7 @@ class Player extends React.Component {
           
             }}  />
         }
-        
+        </div>
       </div>
     );
   }
