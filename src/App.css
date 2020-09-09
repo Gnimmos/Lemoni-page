@@ -217,9 +217,11 @@ button.blockclass{
   }
 .App-logo {
   width:"100px"; 
-  margin-left:10%;
+  margin-left:-40%;
   margin-top: 10%;
   position: absolute;
+  flex: 1;
+
 }
 
 .blockclass {
@@ -243,8 +245,8 @@ button.blockclass{
   font-family: 'SF';
   background-color: transparent;
   min-height: 5vh;
-  display: flex;
-  flex-direction: center;
+  display:flex;
+  flex-direction:column;  flex-direction: center;
   align-items: flex;
   justify-content: tops;
   font-size: calc(10px + 2vmin);
@@ -258,8 +260,8 @@ button.blockclass{
   border: none;
   height: fill;
   min-height: 5vh;
-  display: flex;
-  flex-direction: left;
+  display:flex;
+  flex-direction:column;
   align-items: bottom;
   justify-content: left;
   font-size: calc(5px + 1vmin);
@@ -270,8 +272,8 @@ button.blockclass{
   background-color: transparent;  
   border: none;
   min-height:75vh;
-  display: flex;
-  align-items: flex;
+  display:flex;
+  flex-direction:column; 
   width:flex ;
   width: 100%;
 }
@@ -286,8 +288,10 @@ button.blockclass{
   align-items: flex;
   font-size: calc(10px + 2vmin);
   width: 100%;
-  margin-left: 9%;
   margin-top: 30%;
+  flex: 1;
+  margin-left:-30%;
+
 }
 .support{
   background-color: transparent;
@@ -331,34 +335,28 @@ button.blockclass{
   width: 100%;
 
   display: flex;
-  margin-left: 10%;
-  margin-top: 120%;
+  flex: 1;
+  margin-left:6%;
+  margin-top: 150%;
 }
 .Playerloc{
   width: 100%;
   display: flex;
   position: absolute;
-  margin-left:1%;
-  margin-top: 3%;
+  flex: 1;
+  margin-left:-20%;
+  margin-top: 1%;
 }
 .zonelocation{
   display: flex;
-  margin-left:10%;
+  flex: 1;
+  margin-left:6%;
   position: absolute;
-  margin-top: 50%;
-  width: 100%;
+  margin-top: 65%;
+  width: 200px;
   height: 300px;
 }
-  .zonelocation {
-    background-color:black;
-    position: absolute;
 
-  }
-  .Playerloc{
-    position: absolute;
-    display: flex;
-    margin-left:15%;
-    margin-top: 3%;
-  }
+
 }
 
