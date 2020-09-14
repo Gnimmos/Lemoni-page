@@ -9,7 +9,7 @@
     font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    width:500px;
+    width:400px;
     height: 300px;
     align-items: left;
     }
@@ -19,7 +19,7 @@
     font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    width:500px;
+    width:400px;
     height: 300px;
     align-items: left;
     }
@@ -29,7 +29,7 @@
     font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    width:500px;
+    width:400px;
     height: 300px;
     align-items: left;
     }
@@ -39,7 +39,7 @@
     font-size: 3px;
     background-color: transparent;
     padding: 10px;
-    width:500px;
+    width:400px;
     height: 300px;
     align-items: left;
     }
@@ -49,7 +49,12 @@
     font-family: 'Trim';
     font-size: 15px;
 }
-
+.adjustcont{
+    align-items: left;
+    align-self: left;
+    text-align: left;
+   
+}
 .playbutt{
     background: transparent;
     border-color: transparent;

@@ -96,7 +96,8 @@ button.blockclass{
   min-height:75vh;
   display: flex;
   align-items: flex;
-  width:flex ;
+  width:100% ;
+  height: 150%;
 
 }
 
@@ -127,14 +128,23 @@ button.blockclass{
   width: 80px;
   height: 30px;
   align-self: center;
+  
 }
 .aboutlemoni .aboutlemon{  
   font-family: 'SF';
   align-items: center;
+  align-content: center;
   background-color: transparent;
   border-color: transparent;
-  background-attachment: scroll;
   background-color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position:fixed;
+  top:5%;
+  left:center;
+  width: 40%;
+  height: 80%;
+  text-align: center;
 }
 .contact{
   background-color: transparent;
@@ -147,15 +157,15 @@ button.blockclass{
 
 .murmur {
   font-family: 'SF';
-
   display: block;
+  font-family: 'SF';
+
 }
 .murmurcont{
   font-family: 'SF';
-
   display: flex;
-  margin-left: 21%;
-  margin-top: 6%;
+  margin-left: 15%;
+  margin-top: 8.3%;
 }
 .Playerloc{
   display: flex;
@@ -173,41 +183,84 @@ button.blockclass{
 
 
 
-@media only screen and (max-width: 700px) {
+
+
+
+@media only screen and (max-width: 1080px) {
   .App-1 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background: linear-gradient(90deg,#7f4098,#0e2539);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
   }
   .App-2 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background: linear-gradient(90deg,#fde146,#5eb546);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
   }
   .App-3 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background: linear-gradient(90deg,#76cdd9,#d47097);
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   .App-4 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
     text-align: center;
     background: linear-gradient(90deg,#be1e2d,#ec7323);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
   }
   .App {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%; 
     text-align: center;
     background: linear-gradient(90deg,#000000,#000000);
    }
 
   .grid-1{
+
     background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
     background-size: 60px 60px;  
   }
   .grid-2{
+
     background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
     background-size: 60px 60px;  
   }
   .grid-3{
+
     background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
     background-size: 60px 60px;  
   }
   .grid-4{
+
     background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
     background-size: 60px 60px;  
   }
@@ -217,7 +270,248 @@ button.blockclass{
   }
 .App-logo {
   width:"100px"; 
-  margin-left:-40%;
+  margin-left:7%;
+  margin-top: 9%;
+  position: absolute;
+  flex: 1;
+
+}
+
+.blockclass {
+  display: block;
+}
+form.contact-form{
+  width: 100%;
+}
+input.blockclass{
+  width: inherit;
+  margin-top: 1%
+}
+textarea.blockclass{
+  width: inherit;
+  margin-top: 1%
+}
+button.blockclass{
+  margin-top: 1%
+}
+.App-header {
+  font-family: 'SF';
+  background-color: transparent;
+  min-height: 5vh;
+  display:flex;
+  flex-direction:column;  flex-direction: center;
+  align-items: flex;
+  justify-content: tops;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  text-align: left;
+
+}
+
+.App-footer{
+  font-family: 'SF';
+  background-color: transparent;
+  border: none;
+  height: fill;
+  min-height: 5vh;
+  display:absolute;
+  flex-direction:column;
+  align-items: bottom;
+  justify-content: left;
+  font-size: calc(5px + 1vmin);
+  width: 100%;
+  text-align: left;
+
+  align-self: bottom;
+  width: 100%;
+  bottom:0;
+
+}
+.App-body{
+  background-color: transparent;  
+  border: none;
+  display:absolute;
+  flex-direction:column; 
+  height:800px;
+  width: 100%;
+}
+
+.Menubar{
+  font-family: 'SF';
+  flex-direction: right;
+  border: none;
+  font-family: "Arial";
+  position:relative;
+  display: flex;
+  align-items: flex;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-top: 8%;
+  flex: 1;
+  margin-left:10%;
+
+}
+.support{
+  background-color: transparent;
+  border-color: transparent;
+  width: 80px;
+  height: 30px;
+  align-self: center;
+}
+ .about{
+  background-color: transparent;
+  border-color: transparent;
+  width: 80px;
+  height: 30px;
+  align-self: center;
+}
+.aboutlemoni .aboutlemon{  
+  font-family: 'SF';
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  background-attachment: scroll;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.contact{
+  background-color: transparent;
+  border-color: transparent;
+  width: 80px;
+  height: 30px;
+  align-self: center;
+
+}
+
+.murmur {
+  font-family: 'SF';
+  display: block;
+  align-self: center;
+  font-size: 30px;
+  font-weight: bold;}
+.murmurcont{
+  font-family: 'SF';
+  position: absolute;
+  width: 100%;
+  align-self: center;
+  text-align: left;
+  display:absolute;
+  font-family: 'SF';
+  flex: 1;
+  margin-left:120%;
+  margin-top: 10%;
+}
+.Playerloc{
+  width: 100%;
+  display:absolute;
+  position: absolute;
+  flex: 1;
+  margin-left:5%;
+  margin-top: 10%;
+}
+.zonelocation{
+  display: flex;
+  flex: 1;
+  margin-left:6%;
+  position: absolute;
+  display:absolute;
+  margin-top: 45%;
+  margin-left:5%;
+
+  width: 200px;
+  height: 300px;
+}
+
+
+}
+
+@media only screen and (max-width: 720px) {
+  .App-1 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(90deg,#7f4098,#0e2539);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+  }
+  .App-2 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(90deg,#fde146,#5eb546);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+  }
+  .App-3 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(90deg,#76cdd9,#d47097);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .App-4 {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(90deg,#be1e2d,#ec7323);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+  }
+  .App {
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+    background: linear-gradient(90deg,#000000,#000000);
+   }
+
+  .grid-1{
+
+    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+  .grid-2{
+
+    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+  .grid-3{
+
+    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+  .grid-4{
+
+    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
+    background-size: 60px 60px;  
+  }
+
+.Content {
+    width:fill;
+  }
+.App-logo {
+  width:"100px"; 
+  margin-left:8%;
   margin-top: 10%;
   position: absolute;
   flex: 1;
@@ -251,7 +545,6 @@ button.blockclass{
   justify-content: tops;
   font-size: calc(10px + 2vmin);
   width: 100%;
-
 }
 
 .App-footer{
@@ -260,21 +553,23 @@ button.blockclass{
   border: none;
   height: fill;
   min-height: 5vh;
-  display:flex;
+  display:absolute;
   flex-direction:column;
   align-items: bottom;
   justify-content: left;
   font-size: calc(5px + 1vmin);
   width: 100%;
-
+  align-self: bottom;
+  text-align: left;
+  width: 100%;
+  bottom:0;
 }
 .App-body{
   background-color: transparent;  
   border: none;
-  min-height:75vh;
-  display:flex;
+  display:absolute;
   flex-direction:column; 
-  width:flex ;
+  height:1200px;
   width: 100%;
 }
 
@@ -291,7 +586,6 @@ button.blockclass{
   margin-top: 30%;
   flex: 1;
   margin-left:-30%;
-
 }
 .support{
   background-color: transparent;
@@ -314,6 +608,9 @@ button.blockclass{
   border-color: transparent;
   background-attachment: scroll;
   background-color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .contact{
   background-color: transparent;
@@ -321,30 +618,32 @@ button.blockclass{
   width: 80px;
   height: 30px;
   align-self: center;
-
 }
-
 .murmur {
   font-family: 'SF';
-
   display: block;
-}
+  align-self: center;
+  font-size: 30px;
+  font-weight: bold;}
 .murmurcont{
   font-family: 'SF';
   position: absolute;
   width: 100%;
-
-  display: flex;
+  align-self: center;
+  margin-left: center;
+  text-align: left;
+  display:absolute;
+  font-family: 'SF';
   flex: 1;
-  margin-left:6%;
+  margin-left:12%;
   margin-top: 150%;
 }
 .Playerloc{
   width: 100%;
-  display: flex;
+  display:absolute;
   position: absolute;
   flex: 1;
-  margin-left:-20%;
+  margin-left:2%;
   margin-top: 1%;
 }
 .zonelocation{
@@ -352,6 +651,7 @@ button.blockclass{
   flex: 1;
   margin-left:6%;
   position: absolute;
+  display:absolute;
   margin-top: 65%;
   width: 200px;
   height: 300px;

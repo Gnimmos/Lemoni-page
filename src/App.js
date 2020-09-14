@@ -9,7 +9,9 @@ import logo3 from './logos/LOGO-Mellow-zone.png'
 import logo4 from './logos/LOGO-Twilight-zone.png'
 
 import { Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
 
 
 
@@ -232,7 +234,7 @@ class App extends React.Component {
                <img className = "App-logo"style={{picturecolor:this.state.color2}} src={this.state.logo} alt="Logo" />
             </div>
             <div className="Menubar">
-              <Popup trigger={<button style={{color:this.state.color1}} className="about"> About</button>}
+              <Popup trigger={<button style={{color:this.state.color1}} className="about"> ABOUT</button>}
                 position="right center" 
                 modal
                 closeOnDocumentClick>
@@ -262,7 +264,7 @@ class App extends React.Component {
                   </Element>
                   </div>
               </Popup>
-              <Popup trigger={<button className="support" style={{color:this.state.color1}}> Support</button>}
+              <Popup trigger={<button className="support" style={{color:this.state.color1}}> SCHEDULE</button>}
                 position="right center" 
                 modal
                 closeOnDocumentClick>
@@ -272,7 +274,17 @@ class App extends React.Component {
 
                   </div>
               </Popup>
-              <Popup trigger={<button className="contact" style={{color:this.state.color1}}> Contact</button>}
+              <Popup trigger={<button className="support" style={{color:this.state.color1}}> SUPPORT</button>}
+                position="right center" 
+                modal
+                closeOnDocumentClick>
+                  <div>
+                    <h2 style={{color:this.state.color2}}>ABOUT LEMONI RADIO</h2>
+                    Do something to support
+
+                  </div>
+              </Popup>
+              <Popup trigger={<button className="contact" style={{color:this.state.color1}}> CONTACT</button>}
               position="right center" 
               modal
               closeOnDocumentClick>
@@ -309,12 +321,12 @@ class App extends React.Component {
                 <Zones></Zones>
               </div>
               <div className="murmurcont">
-                <div  style={{color:this.state.color1}} className="murmur"  >
+                <div  style={{color:this.state.color2}}   >
             
-                    <p style={{color:this.state.color1}}>MURMUR BOX</p>
+                    <p style={{color:this.state.color2}}className="murmur">MURMUR BOX</p>
                     
                     <iframe   src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" title="myFrame"> </iframe>	
-                  
+                    <faFacebookF icon={['fab', 'facebook-f']} />
                   </div>
                     
                 

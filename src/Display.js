@@ -1,5 +1,5 @@
 import React,   { Component } from 'react';
-
+import './Display.css'
 
 
 class Display extends Component{
@@ -102,6 +102,7 @@ class Display extends Component{
         const { error, isLoaded, songs } = this.state;
         const colosr = {
           padding: "1px",
+
                 
         };
 
@@ -115,11 +116,11 @@ class Display extends Component{
           return (
             <ul>
               {
-                <div style = {colosr } key={songs.title}>
-                 <h1 style={{color:this.state.color2},colosr}>{this.state.zone}</h1>
+                <div className="disp" key={songs.title}>
+                 <h1 className="dispzone" style={{color:this.state.color2},colosr}>{this.state.zone}</h1>
                  <h1 style={{color:this.state.color2},colosr}>{}</h1>
-                 <p style={{color:this.state.color2},colosr}>Artist: {songs.artist}</p>
-                 <p style={{color:this.state.color2},colosr}>Title: {songs.title}</p>
+                 <h2  className="dispnow" style={{color:this.state.color2},colosr}>NOW PLAYING: </h2>
+                 <p style={{color:this.state.color2},colosr}>{songs.artist} - {songs.title}</p>
                 </div>
               }
             </ul>

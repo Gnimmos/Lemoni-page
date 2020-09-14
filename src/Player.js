@@ -83,14 +83,20 @@ class Player extends React.Component {
   //error when trying to mute
   toggleMute =() =>{
     if (this.state.mute) {
-      this.setState({ 
-        mute: true, unmute:false,   
+      this.setState({           
+        mute: false, unmute:true,   
+      });
+      
 
+    }
+    else{
+      this.setState({ 
+        mute: true, unmute:false,
       });
     }
+    this.audio.muted = this.state.unmute
+    console.log(this.state.mute)
 
-
-    this.audio.muted = this.state.mute
   }
   changecolor (){
     var hours = new Date().getHours(); //Current Hours
@@ -154,7 +160,7 @@ class Player extends React.Component {
         </Popup>
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
         delay the hover of muse disapear over the colume button so the bar is does not immidietly hide */}
-        <button className ="vol" style={{color:this.state.color1}} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute() } >
+        <button className ="vol" style={{color:this.state.color1}} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute } >
           {this.state.mute ?<Icon icon={volumeOff} width="30" height="30"/>: <Icon icon={volumeHigh} width="30" height="30" /> }
           </button>
         {
