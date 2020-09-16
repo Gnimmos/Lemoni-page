@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Trim';
+  src:  url(./Trim.otf) ;
+  }
+@font-face {
+  font-family: 'SF';
+  src:  url(./SF.otf) ;
+ }
+
 .disp{
     text-align: left;
+    font-weight: 900;
+    font-family: 'Trim';
+  }
+.distime{
+  text-align: left;
+  font-weight: 900;
+  font-family: 'SF';
+  font-size: 20px;
 }

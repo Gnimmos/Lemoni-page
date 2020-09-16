@@ -29,7 +29,8 @@
     "react-semantic-ui-range": "^0.7.0",
     "reactjs-popup": "^1.5.0",
     "semantic-ui-component": "0.0.7",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -54,8 +55,11 @@
   },
   "devDependencies": {
     "@iconify/icons-bi": "^1.0.6",
+    "@iconify/icons-bx": "^1.0.3",
     "@iconify/icons-cil": "^1.0.4",
+    "@iconify/icons-clarity": "^1.0.0",
     "@iconify/icons-feather": "^1.0.9",
+    "@iconify/icons-foundation": "^1.0.5",
     "@iconify/icons-gg": "^1.0.0",
     "@iconify/react": "^1.1.3"
   }

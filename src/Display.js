@@ -15,9 +15,12 @@ class Display extends Component{
       items: [],
       color2: '#7f4098',
       zone:"",
+      distime:"",
 
         };
         this.change2 = this.change2.bind(this);
+        this.getTime = this.getTime.bind(this);
+
 
     }
     fetchsongs() {
@@ -51,7 +54,7 @@ class Display extends Component{
             color1: '#7f4098'
           });
           this.setState({
-            zone:"Depp Zone"
+            zone:"DEEP ZONE"
           });
         }
         else if (6 <= hour && hour < 12)
@@ -61,16 +64,14 @@ class Display extends Component{
             color1: '#fde146'
           });
           this.setState({
-            zone:"Energetic Zone"
+            zone:"ENERGETIC ZONE"
           });
         }
         else if (12 <= hour && hour < 18)
         {
-          this.setState({ 
-            color1: '#76cdd9'
-          });
+          
           this.setState({
-            zone:"Mellow Zone"
+            zone:"MELLOW ZONE"
           });
         }
         else 
@@ -79,11 +80,23 @@ class Display extends Component{
             color1: '#be1e2d'
           });
           this.setState({
-            zone:"Twilight Zone"
+            zone:"TWILITGHT ZONE"
           });
         }
         console.log(this.state.color1)
   
+      }
+      getTime (){
+        var datetime = new Date();
+        var seconds = datetime.getSeconds();
+        var minutes = datetime.getMinutes();
+        var hour = datetime.getHours();
+        var Time = hour.toString() + ":"+minutes.toString() + ":" + seconds.toString();
+         //Current Hours
+         this.setState({ 
+          distime : Time
+        });
+    
       }
       componentDidMount(){
         setInterval(() => {
@@ -93,7 +106,12 @@ class Display extends Component{
           () => this.change2(),
           1000
         );
+        this.timerID = setInterval(
+          ()=> this.getTime(),
+          1000
+        );
     }
+    
     componentWillUnmount() {
 
       this.change2();
@@ -118,7 +136,7 @@ class Display extends Component{
               {
                 <div className="disp" key={songs.title}>
                  <h1 className="dispzone" style={{color:this.state.color2},colosr}>{this.state.zone}</h1>
-                 <h1 style={{color:this.state.color2},colosr}>{}</h1>
+                 <h1 className="distime" style={{color:this.state.color2},colosr}>{this.state.distime}</h1>
                  <h2  className="dispnow" style={{color:this.state.color2},colosr}>NOW PLAYING: </h2>
                  <p style={{color:this.state.color2},colosr}>{songs.artist} - {songs.title}</p>
                 </div>

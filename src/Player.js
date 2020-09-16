@@ -3,14 +3,13 @@ import { Slider } from 'react-semantic-ui-range'
 import './Player.css';
 import Display from './Display'
 import { Icon } from '@iconify/react';
-import volumeOff from '@iconify/icons-cil/volume-off';
-import volumeHigh from '@iconify/icons-cil/volume-high';
+import playIcon from '@iconify/icons-foundation/play';
+import volumeOff from '@iconify/icons-bx/bxs-volume-mute';
+import volumeHigh from  '@iconify/icons-bi/volume-up-fill';
 import ReactPlayer from 'react-player'
 import Popup from "reactjs-popup";
-import cameraVideo from '@iconify/icons-bi/camera-video';
-import playIcon from '@iconify/icons-feather/play';
-import playPauseO from '@iconify/icons-gg/play-pause-o';
-import Datetime from'react-datetime';
+import cameraVideo from '@iconify/icons-clarity/video-camera-solid';
+import playPause0 from '@iconify/icons-gg/play-pause';
 
 
 class Player extends React.Component {
@@ -23,7 +22,9 @@ class Player extends React.Component {
     unmute:true,   
     isHovering: false,
     discolor:"playercontainer-1",
-    
+    playcolor: "playbutt-1",
+    volcolor: "vol-1",
+    twichcol: "twitch-1",
   };
   handleMouseHover = this.handleMouseHover.bind(this);
   changecolor = this.changecolor.bind(this);
@@ -50,6 +51,7 @@ class Player extends React.Component {
       () => this.changecolor(),
       1000
     );
+
   }
 
   componentWillUnmount() {
@@ -73,7 +75,7 @@ class Player extends React.Component {
   toggleVolume = () =>{
     this.audio.volume = this.state.volume
     console.log(this.state.volume)
-    if(this.state.volume ===0.1){
+    if(this.state.volume <=0.1){
       this.audio.muted=true;
     }
     else{
@@ -98,6 +100,7 @@ class Player extends React.Component {
     console.log(this.state.mute)
 
   }
+
   changecolor (){
     var hours = new Date().getHours(); //Current Hours
     var hour = hours.toString();
@@ -107,6 +110,15 @@ class Player extends React.Component {
       this.setState({ 
         discolor:"playercontainer-1"
       });
+      this.setState({
+        playcolor:"playbutt-1"
+      });
+      this.setState({
+        volcolor: "vol-1",
+      });
+      this.setState({
+        twichcol:"playbutt-1"
+      });
     }
     else if (6 <= hour && hour < 12)
     {
@@ -114,17 +126,44 @@ class Player extends React.Component {
         
         discolor:"playercontainer-2"
       });
+      this.setState({
+        playcolor:"playbutt-2"
+      });
+      this.setState({
+        volcolor: "vol-2",
+      });
+      this.setState({
+        twichcol:"playbutt-2"
+      });
     }
     else if (12 <= hour && hour < 18)
     {
       this.setState({ 
         discolor:"playercontainer-3"
       });
+      this.setState({
+        playcolor:"playbutt-3"
+      });
+      this.setState({
+        volcolor: "vol-3",
+      });
+      this.setState({
+        twichcol:"playbutt-3"
+      });
     }
     else 
     {
       this.setState({ 
         discolor:"playercontainer-4"
+      });
+      this.setState({
+        playcolor:"playbutt-4"
+      });
+      this.setState({
+        volcolor: "vol-4",
+      });
+      this.setState({
+        twichcol:"playbutt-4"
       });
     }
     console.log(this.state.color1)
@@ -147,23 +186,16 @@ class Player extends React.Component {
         </div>
         <div className = "adjustcont" >
         {/* toggle play and pause on click and show icons */}
-        <button className = "playbutt" onClick={this.togglePlay } style={{color:this.state.color1}}>{this.state.play ?  <Icon icon={playPauseO}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
-        {/* pop up window for video live stream */}
-        <Popup trigger={<button className="twitch" style={{color:this.state.color1}} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
-            position="right center" 
-            modal
-            closeOnDocumentClick>
-              <div style={{backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
-                <ReactPlayer url='https://www.twitch.tv/lemoniradio' />
+        <button className = {this.state.playcolor} onClick={this.togglePlay } >{this.state.play ?  <Icon icon={playPause0}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
 
-              </div>
-        </Popup>
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
         delay the hover of muse disapear over the colume button so the bar is does not immidietly hide */}
-        <button className ="vol" style={{color:this.state.color1}} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute } >
+        <div className = "volume">
+        <button className ={this.state.volcolor} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute } >
           {this.state.mute ?<Icon icon={volumeOff} width="30" height="30"/>: <Icon icon={volumeHigh} width="30" height="30" /> }
+        
           </button>
-        {
+          {
           this.state.isHovering &&
           <Slider style = {volu}
           className ="vol"
@@ -172,10 +204,21 @@ class Player extends React.Component {
             min: this.state.min,
             max: this.state.max,
             step: 0.1,
-          onChange: this.handleOnChange
-          
+            onChange: this.handleOnChange          
             }}  />
         }
+          </div>
+                  {/* pop up window for video live stream */}
+        <Popup trigger={<button className={this.state.twichcol} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
+            position="right center" 
+            modal
+            closeOnDocumentClick>
+              <div className = "video-wrapper">
+                <ReactPlayer className = "react-player" url='https://www.twitch.tv/lemoniradio' />
+
+              </div>
+        </Popup>
+
         </div>
       </div>
     );

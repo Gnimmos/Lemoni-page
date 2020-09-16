@@ -53,31 +53,138 @@
     align-items: left;
     align-self: left;
     text-align: left;
+    position:relative;
+    display: flex;
+    align-items: flex;
    
 }
-.playbutt{
-    background: transparent;
-    border-color: transparent;
-    align-self: start;
-    margin-left: 0%;
-    width: 30px;
-    height: 30px;
-    
-
-}
-.vol{
-    background: transparent;
-    border-color: transparent;
-    margin-left: 10%;
-    width: 30px;
-    height: 30px;
-}
-.twitch{
+.volume{
     background-color: transparent;
     border-color: transparent;
-    width: 30px;
+    width: 80px;
     height: 30px;
-    
-    margin-left: 10%;
+    align-self: left;
+    margin-left: -19px;
 
+}
+.playbutt-1{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #0e2539;
+}
+.playbutt-2{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #5eb546;
+}
+.playbutt-3{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #d47097;
+}
+.playbutt-4{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #ec7323;
+}
+.vol-1{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #0e2539;
+}
+.vol-2{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #5eb546;
+}
+.vol-3{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #d47097;
+
+}
+.vol-4{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #ec7323;
+}
+.twitch-1{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #0e2539;
+}
+.twitch-2{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #5eb546;
+}
+.twitch-3{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #d47097;
+    
+
+}
+.twitch-4{
+    background-color: transparent;
+    border-color: transparent;
+    width: 80px;
+    height: 30px;
+    align-self: left;
+    color: #ec7323;
+}
+.player-wrapper {
+    width: auto;
+    height: auto; 
+    background-color: transparent;
+    align-items: center;
+    align-content: center;
+    left:center;
+
+}
+  .react-player {
+    position: relative; 
+    background-color: transparent;
+    align-items: center;
+    align-content: center;
+    left:center;
+
+
+  }
+  
+  .react-player > div {
+    position: absolute;
   }

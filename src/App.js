@@ -7,10 +7,7 @@ import logo1 from './logos/LOGO-deep-zone.png'
 import logo2 from './logos/LOGO-energetic-zone.png'
 import logo3 from './logos/LOGO-Mellow-zone.png'
 import logo4 from './logos/LOGO-Twilight-zone.png'
-
 import { Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
 
 
@@ -240,7 +237,9 @@ class App extends React.Component {
                 closeOnDocumentClick>
                   <div className="aboutlemoni">
 
-                    <Element style={{color:this.state.color1}} className="aboutlemon" ><h7>ABOUT LEMONI RADIO </h7>  <br/>         
+                    <Element  className="aboutlemon" >
+                      <h2 className = "shed">ABOUT LEMONI RADIO </h2> 
+                       <br/>         
 
 
 
@@ -268,8 +267,8 @@ class App extends React.Component {
                 position="right center" 
                 modal
                 closeOnDocumentClick>
-                  <div>
-                    <h2 style={{color:this.state.color2}}>ABOUT LEMONI RADIO</h2>
+                  <div className="schedule" >
+                    <h2 className = "shed" >LEMONI RADIO RADIO SCHEDULE</h2>
                     Do something to support
 
                   </div>
@@ -278,8 +277,8 @@ class App extends React.Component {
                 position="right center" 
                 modal
                 closeOnDocumentClick>
-                  <div>
-                    <h2 style={{color:this.state.color2}}>ABOUT LEMONI RADIO</h2>
+                  <div className="schedule">
+                    <h2  className = "shed" >ABOUT LEMONI RADIO</h2>
                     Do something to support
 
                   </div>
@@ -288,9 +287,9 @@ class App extends React.Component {
               position="right center" 
               modal
               closeOnDocumentClick>
-                <div>
-                  <div class="modal-content container" style={{color:this.state.color2}}>
-                      <h1>CONTACT LEMONI RADIO</h1>
+                <div className="schedule">
+                  <div class="modal-content container" >
+                      <h2 className = "shed" >CONTACT LEMONI RADIO</h2>
                       <p></p>
                       <p></p>
                       <h1>TALK TO US!</h1>
@@ -313,7 +312,7 @@ class App extends React.Component {
 
         <div className = "App-body">
               <div className="Playerloc">
-              <Player  style={{color:this.state.color2}}>
+              <Player >
 
               </Player>
               </div>
@@ -325,7 +324,7 @@ class App extends React.Component {
             
                     <p style={{color:this.state.color2}}className="murmur">MURMUR BOX</p>
                     
-                    <iframe   src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" title="myFrame"> </iframe>	
+                    <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" title="myFrame"> </iframe>	
                     <faFacebookF icon={['fab', 'facebook-f']} />
                   </div>
                     
@@ -335,8 +334,10 @@ class App extends React.Component {
 
 
         <footer className="App-footer">
-
-        <p id="footerText"style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
+          <div id="footerText">
+            <p style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
+          </div>
+        
         
       </footer>
       </div>
