@@ -103,7 +103,7 @@ class Display extends Component{
             this.fetchsongs();
         }, 10000); 
         this.timerID = setInterval(
-          () => this.change2(),
+          () => this.change2,
           1000
         );
         this.timerID = setInterval(

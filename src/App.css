@@ -73,8 +73,8 @@
   
 .App-logo {
   width:"100px"; 
-  margin-left:140%;
-  margin-top: 28%
+  margin-left:60%;
+  margin-top: 5%
 
 }
 
@@ -99,12 +99,12 @@ button.blockclass{
   font-family: 'Trim';
   background-color: transparent;
   display: flex;
-  flex-direction: center;
+  flex-direction: left;
   align-items: flex;
-  justify-content: tops;
   font-size: calc(10px + 2vmin);
   width:stretch;
-  height: stretch;}
+  height: 100px;
+}
 
 .App-footer{
   font-family: 'Trim';
@@ -142,7 +142,7 @@ button.blockclass{
   font-size: calc(10px + 2vmin);
   left:45%;
   width:flex ;
-  margin-right: 9%;
+  margin-right: 50%;
   margin-top: 4%;
 }
 .support{
@@ -316,21 +316,29 @@ button.blockclass{
 
     background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
     background-size: 60px 60px;  
+    width:stretch;
+    height: 100%;
   }
   .grid-2{
 
     background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
-    background-size: 60px 60px;  
+    background-size: 60px 60px;
+    width:stretch;
+    height: 100%;  
   }
   .grid-3{
 
     background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
     background-size: 60px 60px;  
+    width:stretch;
+    height: 100%;
   }
   .grid-4{
 
     background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
     background-size: 60px 60px;  
+    width:stretch;
+    height: 100%;
   }
 
 .Content {
@@ -381,18 +389,23 @@ button.blockclass{
   background-color: transparent;
   border: none;
   height: stretch;
+  min-height: 5vh;
   display:absolute;
   flex-direction:column;
   align-items: bottom;
   justify-content: left;
   font-size: calc(5px + 1vmin);
   width: 100%;
-  text-align: left;
-
   align-self: bottom;
+  text-align: left;
   width: 100%;
-  bottom:0;
+  bottom:1;
 
+}
+.footerText{
+  background-color: black;
+  height: 100px;
+  display: absolute;
 }
 .App-body{
   background-color: transparent;  
@@ -586,21 +599,52 @@ button.blockclass{
 
     background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
     background-size: 60px 60px;  
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
   }
   .grid-2{
 
     background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
-    background-size: 60px 60px;  
+    background-size: 60px 60px; 
+    position:fixed;
+    top:0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
   .grid-3{
 
     background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
-    background-size: 60px 60px;  
+    background-size: 60px 60px; 
+    position:fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
   .grid-4{
-
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
     background-size: 60px 60px;  
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
 
 .Content {
@@ -634,9 +678,10 @@ button.blockclass{
 }
 .App-header {
   font-family: 'Trim';
-  background-color: transparent;
+  background-color: trasparent;
   min-height: 5vh;
   display:flex;
+  height: 160px;
   flex-direction:column;  flex-direction: center;
   align-items: flex;
   justify-content: tops;
@@ -663,6 +708,7 @@ button.blockclass{
 }
 
 .App-body{
+  margin-top: 1%;
   background-color: transparent;  
   border: none;
   display:absolute;
@@ -687,7 +733,7 @@ button.blockclass{
   width: 100%;
   margin-top: 30%;
   flex: 1;
-  margin-left:-30%;
+  margin-left:-40%;
 }
 .support{
   background-color: transparent;
@@ -772,7 +818,7 @@ button.blockclass{
   font-family: 'Trim';
   flex: 1;
   margin-left:12%;
-  margin-top: 140%;
+  margin-top: 160%;
 }
 .mur{
   width: 400px;
@@ -792,11 +838,9 @@ button.blockclass{
   margin-left:6%;
   position: absolute;
   display:absolute;
-  margin-top: 70%;
-  width: 200px;
-  height: 300px;
-}
-
-
+  margin-top: 80%;
+  width: 100px;
+  height: 200px;
+  }
 }
 

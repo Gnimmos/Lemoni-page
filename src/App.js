@@ -324,8 +324,7 @@ class App extends React.Component {
             
                     <p style={{color:this.state.color2}}className="murmur">MURMUR BOX</p>
                     
-                    <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" title="myFrame"> </iframe>	
-                    <faFacebookF icon={['fab', 'facebook-f']} />
+                    <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="auto" title="myFrame"> </iframe>	
                   </div>
                     
                 
