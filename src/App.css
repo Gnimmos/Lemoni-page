@@ -13,57 +13,77 @@
 .App-1 {
     text-align: left;
     background: linear-gradient(90deg,#7f4098,#0e2539);
-    width: stretch;
-    height: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
   }
   .App-2 {
     text-align: left;
     background: linear-gradient(90deg,#fde146,#5eb546);
-    width:stretch;
-    height: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
   }
   .App-3 {
     text-align: left;
     background: linear-gradient(90deg,#76cdd9,#d47097);
-    width:stretch;
-    height: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
   }
   .App-4 {
     text-align: left;
     background: linear-gradient(90deg,#be1e2d,#ec7323);
-    width:stretch;
-    height: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
   }
   .App {
     text-align: left;
     background: linear-gradient(90deg,#000000,#000000);
-    width:stretch;
-    height: stretch;
+    width:100%;
+    height: 100%;
    }
 
   .grid-1{
-    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
-    background-size: 60px 60px; 
-    width:stretch;
-    height: stretch;
+    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .05em );
+    background-size: 60px 60px;  
+    width: 100%;
+    height: 100%;
   }
   .grid-2{
-    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
+    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .05em );
     background-size: 60px 60px;  
-    width:stretch;
-    height: stretch;
+    width: 100%;
+    height: 100%;
   }
   .grid-3{
-    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
-    background-size: 60px 60px; 
-    width:stretch;
-    height: stretch; 
+    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .05em );
+    background-size: 60px 60px;  
+    width: 100%;
+    height: 100%;
   }
   .grid-4{
-    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
+    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .05em );
     background-size: 60px 60px;  
-    width:stretch;
-    height: stretch;
+    width: 100%;
+    height: 100%;
   }
 
 .Content {
@@ -73,8 +93,8 @@
   
 .App-logo {
   width:"100px"; 
-  margin-left:60%;
-  margin-top: 5%
+  margin-left: 135%;
+  margin-top: 15%
 
 }
 
@@ -136,13 +156,13 @@ button.blockclass{
   flex-direction: right;
   border: none;
   font-family: "Arial";
-  position:relative;
+  position: relative;
   display: flex;
   align-items: flex;
   font-size: calc(10px + 2vmin);
-  left:45%;
-  width:flex ;
-  margin-right: 50%;
+  left: 50%;
+  width: flex;
+  margin-right: 100%;
   margin-top: 4%;
 }
 .support{
@@ -246,9 +266,16 @@ button.blockclass{
 }
 
 .footerText{
-  background-color: black;
-  height: 100px;
-  display: absolute;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin-left:6%;
+  position: relative;
+  display:absolute;
+  bottom: 0px;
+  left: 10%;
 }
 
 
@@ -314,28 +341,28 @@ button.blockclass{
 
   .grid-1{
 
-    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .09em );
+    background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .05em );
     background-size: 60px 60px;  
     width:stretch;
     height: 100%;
   }
   .grid-2{
 
-    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .09em );
+    background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .05em );
     background-size: 60px 60px;
     width:stretch;
     height: 100%;  
   }
   .grid-3{
 
-    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .09em );
+    background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .05em );
     background-size: 60px 60px;  
     width:stretch;
     height: 100%;
   }
   .grid-4{
 
-    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .09em );
+    background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .05Eem );
     background-size: 60px 60px;  
     width:stretch;
     height: 100%;
@@ -560,6 +587,7 @@ button.blockclass{
     background: linear-gradient(90deg,#fde146,#5eb546);
     overflow-y: scroll;
     overflow-x: hidden;
+    margin: 0 auto -142px
 
   }
   .App-3 {
@@ -644,7 +672,6 @@ button.blockclass{
     left:0;
     width: 100%;
     height: 100%;
-    text-align: center;
   }
 
 .Content {
@@ -681,7 +708,7 @@ button.blockclass{
   background-color: trasparent;
   min-height: 5vh;
   display:flex;
-  height: 160px;
+  height: 150px;
   flex-direction:column;  flex-direction: center;
   align-items: flex;
   justify-content: tops;
@@ -690,36 +717,46 @@ button.blockclass{
 }
 
 .App-footer{
+
   font-family: 'Trim';
-  background-color: transparent;
+  background-color: red;
   border: none;
-  height: stretch;
+  height: 15px;
   min-height: 5vh;
   display:absolute;
   flex-direction:column;
   align-items: bottom;
   justify-content: left;
   font-size: calc(5px + 1vmin);
-  width: 100%;
-  align-self: bottom;
   text-align: left;
   width: 100%;
-  bottom:0;
+  position:absolute;
+  bottom: 0px;
+
+ 
 }
 
 .App-body{
   margin-top: 1%;
   background-color: transparent;  
   border: none;
-  display:absolute;
+  display:block;
+  position: relative;
   flex-direction:column; 
-  height:1200px;
+  height:100%;
   width: 100%;
 }
 .footerText{
-  background-color: black;
-  height: 100px;
-  display: absolute;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  margin-left:6%;
+  position: absolute;
+  display:absolute;
+  bottom: 0px;
+  left: 10px;
 }
 .Menubar{
   font-family: 'Trim';
@@ -731,7 +768,7 @@ button.blockclass{
   align-items: flex;
   font-size: calc(10px + 2vmin);
   width: 100%;
-  margin-top: 30%;
+  margin-top: 25%;
   flex: 1;
   margin-left:-40%;
 }
@@ -838,7 +875,7 @@ button.blockclass{
   margin-left:6%;
   position: absolute;
   display:absolute;
-  margin-top: 80%;
+  margin-top: 70%;
   width: 100px;
   height: 200px;
   }

@@ -333,7 +333,7 @@ class App extends React.Component {
 
 
         <footer className="App-footer">
-          <div id="footerText">
+          <div className="footerText">
             <p style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
           </div>
         
