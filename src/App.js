@@ -8,9 +8,13 @@ import logo2 from './logos/LOGO-energetic-zone.png'
 import logo3 from './logos/LOGO-Mellow-zone.png'
 import logo4 from './logos/LOGO-Twilight-zone.png'
 import { Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons' 
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Navbar, Nav, Card, Button} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Media from 'react-bootstrap/Media'
+import ModalTitle from 'react-bootstrap/ModalTitle';
+import ModalBody from 'react-bootstrap/ModalBody'
+import SocialFollow from "./social"
 
 class App extends React.Component {
     //changing backrounds
@@ -24,6 +28,8 @@ class App extends React.Component {
           changeback :"App",
           checkgrid:"grid",
           logo : logo1,
+          zonetxt : "",
+          isToggleOn: true,
     
       };
        //binding the functions to the class
@@ -31,8 +37,14 @@ class App extends React.Component {
   this.changebackround = this.changebackround.bind(this);
   this.changegrid = this.changegrid.bind(this);
   this.scrollToTop = this.scrollToTop.bind(this);
+  this.handleClick = this.handleClick.bind(this);
 
 }
+
+  handleClick() {  
+    this.setState( state => ({
+      isToggleOn: !state.isToggleOn    }));
+      }
     changetext (){
       var hours = new Date().getHours(); //Current Hours
       var hour = hours.toString();
@@ -226,119 +238,212 @@ class App extends React.Component {
         return (
       <div className={this.state.changeback} >
         <div className = {this.state.checkgrid}>
-        <header className="App-header" >
-            <div  style={{background:this.state.changeback}} className="Content">
-               <img className = "App-logo"style={{picturecolor:this.state.color2}} src={this.state.logo} alt="Logo" />
-            </div>
-            <div className="Menubar">
-              <Popup trigger={<button style={{color:this.state.color1}} className="about"> ABOUT</button>}
-                position="right center" 
-                modal
-                closeOnDocumentClick>
-                  <div className="aboutlemoni">
+          <Container expand = "lg">
 
-                    <Element  className="aboutlemon" >
-                      <h2 className = "shed">ABOUT LEMONI RADIO </h2> 
-                       <br/>         
-
-
-
-                    Το Λεμονι βγήκε απο την ανάγκη για ένα ραδιόφωνο πιο ρομαντικό, πιο παλιό, πιο ουσιαστικά μουσικό και εκφραστικό. Ελέυθερο. Χωρίς συνεχόμενες διαφημίσεις. Χωρις φωνές που δεν έχουν κάτι να προσθέσουν στον ήχο. Με τραγούδια και μουσικές που δεν βγήκαν από καλούπια ή δοσμένα playlist αλλά με τραγούδια που θεωρούμε όμορφα και οτι αξίζουν να ακουστούν. Θεωρούμε ότι το ραδιόφωνο μας πρέπει να προωθεί την ντόπια παραγωγή μουσικής. Από τη “Γη της Λεμονιάς” , μέσω του διαδικτύου να της δίνει βήμα. Θέλουμε, ταυτόχρονα, να δίνει ακούσματα από όλο τον κόσμο , από κάθε γωνιά της γης η οποία παράγει μελωδία , ρυθμό και αρμονία. Το διαδίκτυο είναι παγκόσμιο και το ίδιο και η μουσική.
-                    <br/>
-                    Στο Λεμονι όραμα μας είναι αν δημιουργήσουμε ενα ραδιόφωνο το οποίο να εχει να δώσει μουσική, γνώση, εναλλακτικούς τρόπους σκέψης και έκφρασης και άλλα στον ακροατη αλλά και στους καλλιτέχνες που δημιουργούνε τους ήχους που δίνουν γευση στην ζωή μας. Μουσική που δεν διακόπτεται από διαφημιστικά διαλείμματα. Μουσική που ζεί και εξελίσσεται μαζί με τους ακροατές της. Τέσσερις μουσικές ζώνες όπου η μουσική είναι πολυφασματική, πολυπολιτισμική, ελκυστική και περιπετειώδης στο άκουσμα, από όλες τις εποχές και όλες τις χρονολογίες. 4 διαφορετικές διαθέσεις οι οποίες αλλάζουν και προσαρμόζονται αναλόγως μέρας, εποχής και γεγονότων. Παραμένουν όμως πιστές στον ορισμούς τους. Energetic, Mellow Twilight και Deep.
-                    <br/>
-                    Το Λεμόνι είναι μια μουσική πλατφόρμα πάνω στην οποία έρχονται και αποκτούν γεύση διάφορα ακούσματα απο τις εκπομπές οι οποίες έχουν κάτι το πολύ ιδιαίτερο να προσφέρουν με περιεχόμενο μουσικό , θεματολογικό ή φιλοσοφικό μέχρι ένθετα και ατάκες απο την καθημερινότητα μας..
-                    <br/>
-                    <br/>
-                    <br/>
-                    Λεμόνι.<br/>
-                    Γεύση στον ήχο.
-                    <br/>
-                    TEST MODE<br/>
-                    Τι σημαίνει?<br/>
-                    Σημαίνει οτι ακόμα δουλεύουμε σε πολλά πράγματα (Τεχνικά, ροή, εξοπλισμός, συνεργάτες, ψυχολογικά, υπαρξιακά, οικονομικά, δημόσια έργα, μετακομίσεις, αλλαγές διάθεσης, ορμόνες, κ.τ.λ.), αλλά μέχρι τότε, δίνουμε μουσική και εκπομπές, χωρίς διαφημίσεις σε όσους έχουν την τόλμη να μας ακούνε.
-                    Πότε θα βγούμε από το TEST MODE
-                    Όταν αυτό που θα έχουμε να προσφέρουμε στους ακροατές , θα είναι όπως το φανταστήκαμε.
-
-                  </Element>
-                  </div>
-              </Popup>
-              <Popup trigger={<button className="support" style={{color:this.state.color1}}> SCHEDULE</button>}
-                position="right center" 
-                modal
-                closeOnDocumentClick>
-                  <div className="schedule" >
-                    <h2 className = "shed" >LEMONI RADIO RADIO SCHEDULE</h2>
-                    Do something to support
-
-                  </div>
-              </Popup>
-              <Popup trigger={<button className="support" style={{color:this.state.color1}}> SUPPORT</button>}
-                position="right center" 
-                modal
-                closeOnDocumentClick>
-                  <div className="schedule">
-                    <h2  className = "shed" >ABOUT LEMONI RADIO</h2>
-                    Do something to support
-
-                  </div>
-              </Popup>
-              <Popup trigger={<button className="contact" style={{color:this.state.color1}}> CONTACT</button>}
-              position="right center" 
-              modal
-              closeOnDocumentClick>
-                <div className="schedule">
-                  <div class="modal-content container" >
-                      <h2 className = "shed" >CONTACT LEMONI RADIO</h2>
-                      <p></p>
-                      <p></p>
-                      <h1>TALK TO US!</h1>
-                      <form  className="contact-form" action="contactform.php" method="POST">
-                        <input type="text" name="name"  placeholder="NAME" class="blockclass input-txt"/>
-                        <input type="email" name="email" placeholder="EMAIL" class="blockclass input-txt"/>
-                        <textarea name="message" id="" cols="30" rows="10" placeholder="MESSAGE" class="blockclass input-txt"></textarea>
-                        <button type="submit" name="submit" class="blockclass">Submit</button>
-
-                      </form>
-
-
-
-                    </div>
-              </div>
-            </Popup>
-            </div>
-        </header>
-
-
-        <div className = "App-body">
-              <div className="Playerloc">
-              <Player >
-
-              </Player>
-              </div>
-              <div className = "zonelocation">
-                <Zones></Zones>
-              </div>
-              <div className="murmurcont">
-                <div  style={{color:this.state.color2}}   >
             
-                    <p style={{color:this.state.color2}}className="murmur">MURMUR BOX</p>
-                    
-                    <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="410px"   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="auto" title="myFrame"> </iframe>	
+              <Navbar bg="trasparent" expand="lg" className="px-0" >
+                    <Navbar.Brand href="#home ">
+                    <div  style={{background:this.state.changeback}} className="Content">
+                    <img className = "App-logo"style={{picturecolor:this.state.color2}} src={this.state.logo} alt="Logo" />
                   </div>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                          <Navbar.Collapse id="basic-navbar-nav" className="ml-auto">
+                            <Nav className="ml-auto">
+                            <Popup trigger={<button style={{color:this.state.color1}} className="menubutt"> ABOUT</button>}
+                            position="right center" 
+                            modal
+                            closeOnDocumentClick>
+                              <div className="aboutlemoni">
+                              <Modal.Dialog>
+                                <Modal.Header closeButton>
+                                  <Modal.Title>Modal title</Modal.Title>
+                                </Modal.Header>
+
+                                <Modal.Body>
+                                  <p>Modal body text goes here.</p>
+                                </Modal.Body>
+
+                                <Modal.Footer>
+                                  <Button variant="secondary">Close</Button>
+                                  <Button variant="primary">Save changes</Button>
+                                </Modal.Footer>
+                              </Modal.Dialog>
+
+                                <Element  className="aboutlemon" >
+                                  <h2 className = "shed">ABOUT LEMONI RADIO </h2> 
+                                  <br/>         
+
+
+
+                                Το Λεμονι βγήκε απο την ανάγκη για ένα ραδιόφωνο πιο ρομαντικό, πιο παλιό, πιο ουσιαστικά μουσικό και εκφραστικό. Ελέυθερο. Χωρίς συνεχόμενες διαφημίσεις. Χωρις φωνές που δεν έχουν κάτι να προσθέσουν στον ήχο. Με τραγούδια και μουσικές που δεν βγήκαν από καλούπια ή δοσμένα playlist αλλά με τραγούδια που θεωρούμε όμορφα και οτι αξίζουν να ακουστούν. Θεωρούμε ότι το ραδιόφωνο μας πρέπει να προωθεί την ντόπια παραγωγή μουσικής. Από τη “Γη της Λεμονιάς” , μέσω του διαδικτύου να της δίνει βήμα. Θέλουμε, ταυτόχρονα, να δίνει ακούσματα από όλο τον κόσμο , από κάθε γωνιά της γης η οποία παράγει μελωδία , ρυθμό και αρμονία. Το διαδίκτυο είναι παγκόσμιο και το ίδιο και η μουσική.
+                                <br/>
+                                Στο Λεμονι όραμα μας είναι αν δημιουργήσουμε ενα ραδιόφωνο το οποίο να εχει να δώσει μουσική, γνώση, εναλλακτικούς τρόπους σκέψης και έκφρασης και άλλα στον ακροατη αλλά και στους καλλιτέχνες που δημιουργούνε τους ήχους που δίνουν γευση στην ζωή μας. Μουσική που δεν διακόπτεται από διαφημιστικά διαλείμματα. Μουσική που ζεί και εξελίσσεται μαζί με τους ακροατές της. Τέσσερις μουσικές ζώνες όπου η μουσική είναι πολυφασματική, πολυπολιτισμική, ελκυστική και περιπετειώδης στο άκουσμα, από όλες τις εποχές και όλες τις χρονολογίες. 4 διαφορετικές διαθέσεις οι οποίες αλλάζουν και προσαρμόζονται αναλόγως μέρας, εποχής και γεγονότων. Παραμένουν όμως πιστές στον ορισμούς τους. Energetic, Mellow Twilight και Deep.
+                                <br/>
+                                Το Λεμόνι είναι μια μουσική πλατφόρμα πάνω στην οποία έρχονται και αποκτούν γεύση διάφορα ακούσματα απο τις εκπομπές οι οποίες έχουν κάτι το πολύ ιδιαίτερο να προσφέρουν με περιεχόμενο μουσικό , θεματολογικό ή φιλοσοφικό μέχρι ένθετα και ατάκες απο την καθημερινότητα μας..
+                                <br/>
+                                <br/>
+                                <br/>
+                                Λεμόνι.<br/>
+                                Γεύση στον ήχο.
+                                <br/>
+                                TEST MODE<br/>
+                                Τι σημαίνει?<br/>
+                                Σημαίνει οτι ακόμα δουλεύουμε σε πολλά πράγματα (Τεχνικά, ροή, εξοπλισμός, συνεργάτες, ψυχολογικά, υπαρξιακά, οικονομικά, δημόσια έργα, μετακομίσεις, αλλαγές διάθεσης, ορμόνες, κ.τ.λ.), αλλά μέχρι τότε, δίνουμε μουσική και εκπομπές, χωρίς διαφημίσεις σε όσους έχουν την τόλμη να μας ακούνε.
+                                Πότε θα βγούμε από το TEST MODE
+                                Όταν αυτό που θα έχουμε να προσφέρουμε στους ακροατές , θα είναι όπως το φανταστήκαμε.
+
+
+                                <Media>
+                                <Media.Body>
+                                <img
+                                  width={64}
+                                  height={64}
+                                  className="ml-3"
+                                  src={this.state.logo}
+                                  alt="Generic placeholder"
+                                />
+                                  <h5>Media Heading</h5>
+                                  <p>
+                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
+                                    tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
+                                    Donec lacinia congue felis in faucibus.
+                                  </p>
+                                </Media.Body>
+
+                              </Media>
+
+                              </Element>
+                              </div>
+                          </Popup>
+                            <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}> SCHEDULE</button>}
+                            position="right center" 
+                            modal
+                            closeOnDocumentClick>
+                              <div className="schedule" >
+                                <div className="grid-container">
+                                <div className="Sheduling">SHEDULE</div>
+
+                                <div className="Monday">
+                                    MONDAY<br/>
+                                    16:00-18:00 <br/> 
+                                    Yas Show <br/> 
+                                    <br/>
+                                    18:00-20:00 <br/>
+                                    Meeting Points<br/>
+                                    <br/>
+                                </div>
+                                <div className="Tuesday">
+                                    TUESDAY<br/>
+                                    16:00-18:00 <br/> 
+                                    Xanax με πάγο <br/> 
+                                    <br/>
+                                    18:00-20:00 <br/>
+                                    Κυτταρίνη και άλλες<br/> Ουσίες<br/>
+                                    <br/>
+                                    22:00-00:00 <br/>
+                                    Technical Midweek<br/> Issues<br/>
+
+                                </div>
+                                <div className="Wednesday">
+                                    WEDNESDAY<br/>
+                                    20:00-22:00 <br/>
+                                    Ήχοι της Γειτονιας<br/>
+                                    <br/>
+                                    22:00-00:00 <br/>
+                                    Ρεμπετικη Γευση<br/>
+                                    <br/>
+                                <div className="Thursday">4
+                                    THURSDAY<br/>
+                                    16:00-18:00 <br/> 
+                                    Music is Memory <br/> 
+                                    <br/>
+                                    18:00-20:00 <br/>
+                                    The Blackout Show<br/>
+                                    <br/>
+                                    22:00-00:00 <br/>
+                                    The One With The Metal<br/>
+
+                                </div>
+                                <div className="Friday">
+                                
+                                </div>
+                                <div className="Saturday">6</div>
+                                <div className="Sunday">7</div>
+                              </div> 
+                                
+                              </div>
+                            </div>
+                              
+                          </Popup>
+                          <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}> SUPPORT</button>}
+                            position="right center" 
+                            modal
+                            closeOnDocumentClick>
+                              <div className="schedule">
+                                <h2  className = "shed" >ABOUT LEMONI RADIO</h2>
+                                Do something to support
+
+                              </div>
+                          </Popup>
+                          <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}> CONTACT</button>}
+                          position="right center" 
+                          modal
+                          closeOnDocumentClick>
+                            <div className="schedule">
+                                  <h2 className = "shed" >CONTACT LEMONI RADIO</h2>
                     
-                
-            </div>
-        </div>
+                                  <SocialFollow />
+                          </div>
+                        </Popup>
+                      </Nav>
+                    </Navbar.Collapse>
+            </Navbar>          
+          </Container>
 
 
-        <footer className="App-footer">
-          <div className="footerText">
-            <p style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
-          </div>
-        
-        
-      </footer>
+        <Container>
+        <Row>
+          <Col md={5} className = "px-0">
+          <Player >
+
+          </Player>
+          </Col>
+        </Row>
+        <Row>
+          <Col  md={5} className = "px-0 my-5">
+              <button className = "zonebutt p-0" onClick={this.handleClick}>   
+              {this.state.isToggleOn ? 'ON' : 'OFF'}
+   
+                <Zones></Zones>
+                </button>
+          </Col>
+
+          <Col md={{ span: 5, offset: 1 }} className = "px-0 murmurcont">
+                <div  style = {{color:this.state.color2}} >
+            
+                  <p style = {{color:this.state.color2}}className="murmur">MURMUR BOX</p>
+                    
+                  <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="400px"   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="auto" title="myFrame"> </iframe>	
+                </div>
+          </Col>
+        </Row>
+      </Container>
+
+
+      
+<Container>
+          <Row>
+            <Col >
+                <footer className="App-footer">
+                  <div className="footerText">
+                    <p style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
+                  </div>        
+                </footer>
+            </Col>
+          </Row>
+      </Container>
       </div>
       </div>
 

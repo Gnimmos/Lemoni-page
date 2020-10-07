@@ -8,19 +8,15 @@
     font-family: 'Trim';
     font-size: 3px;
     background-color: transparent;
-    padding: 10px;
     width:400px;
-    height: 300px;
-    align-items: left;
+        align-items: left;
     }
 .playercontainer-2{
     color: #5eb546;
     font-family: 'Trim';
     font-size: 3px;
     background-color: transparent;
-    padding: 10px;
     width:400px;
-    height: 300px;
     align-items: left;
     }
 .playercontainer-3{
@@ -28,9 +24,7 @@
     font-family: 'Trim';
     font-size: 3px;
     background-color: transparent;
-    padding: 10px;
     width:400px;
-    height: 300px;
     align-items: left;
     }
 .playercontainer-4{
@@ -38,16 +32,14 @@
     font-family: 'Trim';
     font-size: 3px;
     background-color: transparent;
-    padding: 10px;
     width:400px;
-    height: 300px;
     align-items: left;
     }
 .adjustdis{
-    margin-left: -6%;
-    margin-top: 6%;
+    margin: 6% 0% 6% 0%;
     font-family: 'Trim';
     font-size: 15px;
+    padding:0 !important;
 }
 .adjustcont{
     align-items: left;
@@ -61,7 +53,6 @@
 .volume{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     margin-left: -19px;
@@ -70,7 +61,6 @@
 .playbutt-1{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #0e2539;
@@ -78,7 +68,6 @@
 .playbutt-2{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #5eb546;
@@ -86,7 +75,6 @@
 .playbutt-3{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #d47097;
@@ -94,7 +82,6 @@
 .playbutt-4{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #ec7323;
@@ -102,7 +89,6 @@
 .vol-1{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #0e2539;
@@ -110,7 +96,6 @@
 .vol-2{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #5eb546;
@@ -118,7 +103,6 @@
 .vol-3{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #d47097;
@@ -127,7 +111,6 @@
 .vol-4{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #ec7323;
@@ -135,7 +118,6 @@
 .twitch-1{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #0e2539;
@@ -143,7 +125,6 @@
 .twitch-2{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #5eb546;
@@ -151,7 +132,6 @@
 .twitch-3{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #d47097;
@@ -161,7 +141,6 @@
 .twitch-4{
     background-color: transparent;
     border-color: transparent;
-    width: 80px;
     height: 30px;
     align-self: left;
     color: #ec7323;

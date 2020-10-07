@@ -10,6 +10,7 @@ import ReactPlayer from 'react-player'
 import Popup from "reactjs-popup";
 import cameraVideo from '@iconify/icons-clarity/video-camera-solid';
 import playPause0 from '@iconify/icons-gg/play-pause';
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 class Player extends React.Component {
@@ -178,14 +179,17 @@ class Player extends React.Component {
       aligment:"bottom"
     };
     return (
+    
       <div  className =  {this.state.discolor}>
 
+
         {/* Display the metadate from class */}
-        <div className = "adjustdis" >
+        <Row className = "adjustdis" >
           <Display/>
-        </div>
-        <div className = "adjustcont" >
+        </Row>
+        <Row className = "adjustcont" >
         {/* toggle play and pause on click and show icons */}
+      
         <button className = {this.state.playcolor} onClick={this.togglePlay } >{this.state.play ?  <Icon icon={playPause0}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
 
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
@@ -219,7 +223,7 @@ class Player extends React.Component {
               </div>
         </Popup>
 
-        </div>
+        </Row>
       </div>
     );
   }

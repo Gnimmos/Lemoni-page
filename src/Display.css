@@ -7,8 +7,10 @@
   src:  url(./SF.otf) ;
  }
 
+ .all{
+   text-align: left;
+ }
 .disp{
-    text-align: left;
     font-weight: 900;
     font-family: 'Trim';
   }

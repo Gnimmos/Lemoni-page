@@ -118,30 +118,23 @@ class Display extends Component{
     }
       render() {
         const { error, isLoaded, songs } = this.state;
-        const colosr = {
-          padding: "1px",
 
-                
-        };
 
         if (error) {
-          return <div style={{color:this.state.color2}, colosr}>Error: {error.message}</div>;
+          return <div style={{color:this.state.color1}}>Error: {error.message}</div>;
         } else if (!isLoaded) {
-        return <div style={{color:this.state.color2},colosr}>Loading...</div>;
+        return <span style={{color:this.state.color1}}>Loading...</span>;
         }  else if (!songs){
             return<div>Empty</div>;
         } else {
           return (
-            <ul>
-              {
                 <div className="disp" key={songs.title}>
-                 <h1 className="dispzone" style={{color:this.state.color2},colosr}>{this.state.zone}</h1>
-                 <h1 className="distime" style={{color:this.state.color2},colosr}>{this.state.distime}</h1>
-                 <h2  className="dispnow" style={{color:this.state.color2},colosr}>NOW PLAYING: </h2>
-                 <p style={{color:this.state.color2},colosr}>{songs.artist} - {songs.title}</p>
+                 <h1 className="dispzone" style={{color:this.state.color1}}>{this.state.zone}</h1>
+                 <h1 className="distime" style={{color:this.state.color1}}>{this.state.distime}</h1>
+                 <h2  className="dispnow" style={{color:this.state.color1}}>NOW PLAYING: </h2>
+                 <p style={{color:this.state.color1}}>{songs.artist} - {songs.title}</p>
                 </div>
-              }
-            </ul>
+              
           );
         }
 
