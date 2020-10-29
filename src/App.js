@@ -12,9 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, Card, Button} from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
 import Media from 'react-bootstrap/Media'
-import ModalTitle from 'react-bootstrap/ModalTitle';
-import ModalBody from 'react-bootstrap/ModalBody'
-import SocialFollow from "./social"
+import SocialFollow from "./social";
+import Zonetxt from './Zonetxt'
 
 class App extends React.Component {
     //changing backrounds
@@ -22,8 +21,9 @@ class App extends React.Component {
       super(props);
     
     
+
       this.state = {
-          color1: '#0e2539',
+          color1: '#0e2539', 
           color2: '#7f4098',
           changeback :"App",
           checkgrid:"grid",
@@ -238,7 +238,7 @@ class App extends React.Component {
         return (
       <div className={this.state.changeback} >
         <div className = {this.state.checkgrid}>
-          <Container expand = "lg">
+          <Container className = "cont1"expand = "lg">
 
             
               <Navbar bg="trasparent" expand="lg" className="px-0" >
@@ -248,27 +248,14 @@ class App extends React.Component {
                   </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                          <Navbar.Collapse id="basic-navbar-nav" className="ml-auto">
+                          <Navbar.Collapse id="basic-navbar-nav" className="mr-sm-2">
                             <Nav className="ml-auto">
                             <Popup trigger={<button style={{color:this.state.color1}} className="menubutt"> ABOUT</button>}
-                            position="right center" 
+                            position="center center" 
                             modal
                             closeOnDocumentClick>
-                              <div className="aboutlemoni">
-                              <Modal.Dialog>
-                                <Modal.Header closeButton>
-                                  <Modal.Title>Modal title</Modal.Title>
-                                </Modal.Header>
-
-                                <Modal.Body>
-                                  <p>Modal body text goes here.</p>
-                                </Modal.Body>
-
-                                <Modal.Footer>
-                                  <Button variant="secondary">Close</Button>
-                                  <Button variant="primary">Save changes</Button>
-                                </Modal.Footer>
-                              </Modal.Dialog>
+                              <div className="schedule">
+ 
 
                                 <Element  className="aboutlemon" >
                                   <h2 className = "shed">ABOUT LEMONI RADIO </h2> 
@@ -276,25 +263,19 @@ class App extends React.Component {
 
 
 
-                                Το Λεμονι βγήκε απο την ανάγκη για ένα ραδιόφωνο πιο ρομαντικό, πιο παλιό, πιο ουσιαστικά μουσικό και εκφραστικό. Ελέυθερο. Χωρίς συνεχόμενες διαφημίσεις. Χωρις φωνές που δεν έχουν κάτι να προσθέσουν στον ήχο. Με τραγούδια και μουσικές που δεν βγήκαν από καλούπια ή δοσμένα playlist αλλά με τραγούδια που θεωρούμε όμορφα και οτι αξίζουν να ακουστούν. Θεωρούμε ότι το ραδιόφωνο μας πρέπει να προωθεί την ντόπια παραγωγή μουσικής. Από τη “Γη της Λεμονιάς” , μέσω του διαδικτύου να της δίνει βήμα. Θέλουμε, ταυτόχρονα, να δίνει ακούσματα από όλο τον κόσμο , από κάθε γωνιά της γης η οποία παράγει μελωδία , ρυθμό και αρμονία. Το διαδίκτυο είναι παγκόσμιο και το ίδιο και η μουσική.
-                                <br/>
-                                Στο Λεμονι όραμα μας είναι αν δημιουργήσουμε ενα ραδιόφωνο το οποίο να εχει να δώσει μουσική, γνώση, εναλλακτικούς τρόπους σκέψης και έκφρασης και άλλα στον ακροατη αλλά και στους καλλιτέχνες που δημιουργούνε τους ήχους που δίνουν γευση στην ζωή μας. Μουσική που δεν διακόπτεται από διαφημιστικά διαλείμματα. Μουσική που ζεί και εξελίσσεται μαζί με τους ακροατές της. Τέσσερις μουσικές ζώνες όπου η μουσική είναι πολυφασματική, πολυπολιτισμική, ελκυστική και περιπετειώδης στο άκουσμα, από όλες τις εποχές και όλες τις χρονολογίες. 4 διαφορετικές διαθέσεις οι οποίες αλλάζουν και προσαρμόζονται αναλόγως μέρας, εποχής και γεγονότων. Παραμένουν όμως πιστές στον ορισμούς τους. Energetic, Mellow Twilight και Deep.
-                                <br/>
-                                Το Λεμόνι είναι μια μουσική πλατφόρμα πάνω στην οποία έρχονται και αποκτούν γεύση διάφορα ακούσματα απο τις εκπομπές οι οποίες έχουν κάτι το πολύ ιδιαίτερο να προσφέρουν με περιεχόμενο μουσικό , θεματολογικό ή φιλοσοφικό μέχρι ένθετα και ατάκες απο την καθημερινότητα μας..
-                                <br/>
-                                <br/>
-                                <br/>
-                                Λεμόνι.<br/>
-                                Γεύση στον ήχο.
-                                <br/>
-                                TEST MODE<br/>
-                                Τι σημαίνει?<br/>
-                                Σημαίνει οτι ακόμα δουλεύουμε σε πολλά πράγματα (Τεχνικά, ροή, εξοπλισμός, συνεργάτες, ψυχολογικά, υπαρξιακά, οικονομικά, δημόσια έργα, μετακομίσεις, αλλαγές διάθεσης, ορμόνες, κ.τ.λ.), αλλά μέχρι τότε, δίνουμε μουσική και εκπομπές, χωρίς διαφημίσεις σε όσους έχουν την τόλμη να μας ακούνε.
-                                Πότε θα βγούμε από το TEST MODE
-                                Όταν αυτό που θα έχουμε να προσφέρουμε στους ακροατές , θα είναι όπως το φανταστήκαμε.
+                                  Το Λεμονι βγήκε απο την ανάγκη για ένα ραδιόφωνο πιο ρομαντικό, πιο παλιό, πιο ουσιαστικά μουσικό και εκφραστικό. 
+                                  Ελέυθερο. Χωρίς συνεχόμενες διαφημίσεις. Χωρις φωνές που δεν έχουν κάτι να προσθέσουν στον ήχο. 
+                                  Με τραγούδια και μουσικές που δεν βγήκαν από καλούπια ή δοσμένα playlist αλλά με τραγούδια που θεωρούμε όμορφα και οτι αξίζουν να ακουστούν. 
+                                  Θεωρούμε ότι το ραδιόφωνο μας πρέπει να προωθεί την ντόπια παραγωγή μουσικής. Από τη “Γη της Λεμονιάς”, μέσω του διαδικτύου να της δίνει βήμα. Θέλουμε, ταυτόχρονα,
+                                  να δίνει ακούσματα από όλο τον κόσμο , από κάθε γωνιά της γης η οποία παράγει μελωδία , ρυθμό και αρμονία. Το διαδίκτυο είναι παγκόσμιο και το ίδιο και η μουσική. 
+                                  Στο Λεμονι όραμα μας είναι αν δημιουργήσουμε ενα ραδιόφωνο το οποίο να εχει να δώσει μουσική, γνώση, εναλλακτικούς τρόπους σκέψης και έκφρασης και άλλα στον ακροατη 
+                                  αλλά και στους καλλιτέχνες που δημιουργούνε τους ήχους που δίνουν γευση στην ζωή μας. Μουσική που δεν διακόπτεται από διαφημιστικά διαλείμματα. 
+                                  Μουσική που ζεί και εξελίσσεται μαζί με τους ακροατές της. Τέσσερις μουσικές ζώνες όπου η μουσική είναι πολυφασματική, πολυπολιτισμική, ελκυστική και περιπετειώδης στο άκουσμα, 
+                                  από όλες τις εποχές και όλες τις χρονολογίες. 4 διαφορετικές διαθέσεις οι οποίες αλλάζουν και προσαρμόζονται αναλόγως μέρας, εποχής και γεγονότων. Παραμένουν όμως πιστές στον 
+                                  ορισμούς τους. Energetic, Mellow Twilight και Deep.  Το Λεμόνι είναι μια μουσική πλατφόρμα πάνω στην οποία έρχονται και αποκτούν γεύση διάφορα ακούσματα απο τις εκπομπές οι οποίες 
+                                  έχουν κάτι το πολύ ιδιαίτερο να προσφέρουν με περιεχόμενο μουσικό, θεματολογικό ή φιλοσοφικό μέχρι ένθετα και ατάκες απο την καθημερινότητα μας. 
 
-
-                                <Media>
+                                {/* <Media>
                                 <Media.Body>
                                 <img
                                   width={64}
@@ -312,7 +293,7 @@ class App extends React.Component {
                                   </p>
                                 </Media.Body>
 
-                              </Media>
+                              </Media> */}
 
                               </Element>
                               </div>
@@ -322,88 +303,140 @@ class App extends React.Component {
                             modal
                             closeOnDocumentClick>
                               <div className="schedule" >
+                              
                                 <div className="grid-container">
-                                <div className="Sheduling">SHEDULE</div>
-
+                                <div className="Sheduling"><h2 className = "shed">SCHEDULE</h2></div>
+                                <br/>
+                                <br/>
                                 <div className="Monday">
-                                    MONDAY<br/>
-                                    16:00-18:00 <br/> 
+                                    <h4 className="Scedutitle">MONDAYS</h4>
+                                    <p style={{color:"#76cdd9"}}> 
+
+                                    16:00 - 18:00 <br/> 
                                     Yas Show <br/> 
-                                    <br/>
-                                    18:00-20:00 <br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+
+                                    18:00 - 20:00 <br/>
                                     Meeting Points<br/>
+                                    </p>
                                     <br/>
-                                </div>
-                                <div className="Tuesday">
-                                    TUESDAY<br/>
-                                    16:00-18:00 <br/> 
-                                    Xanax με πάγο <br/> 
                                     <br/>
-                                    18:00-20:00 <br/>
+                                    <h4 className="Scedutitle">TUESDAYS</h4>
+                                    <p style={{color:"#76cdd9"}}> 
+
+                                    16:00 - 18:00 <br/> 
+                                    Όλα ΖΕΝ<br/> 
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+
+                                    18:00 - 20:00 <br/>
                                     Κυτταρίνη και άλλες<br/> Ουσίες<br/>
-                                    <br/>
-                                    22:00-00:00 <br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    22:00 - 00:00 <br/>
                                     Technical Midweek<br/> Issues<br/>
-
+                                    </p>
                                 </div>
+
                                 <div className="Wednesday">
-                                    WEDNESDAY<br/>
-                                    20:00-22:00 <br/>
+                                <h4 className="Scedutitle">WEDNESDAYS</h4>
+                                <p style={{color:"#ec7323"}}> 
+                                    18:00 - 20:00 <br/>
+                                    Kenny Sounds<br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    20:00 - 22:00 <br/>
                                     Ήχοι της Γειτονιας<br/>
-                                    <br/>
-                                    22:00-00:00 <br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    22:00 - 00:00 <br/>
                                     Ρεμπετικη Γευση<br/>
+                                    </p>
                                     <br/>
-                                <div className="Thursday">4
-                                    THURSDAY<br/>
-                                    16:00-18:00 <br/> 
+                                    <br/>
+                                    <h4 className="Scedutitle">THURSDAYS</h4>
+                                    <p style={{color:"#ec7323"}}> 
+                                    18:00 - 20:00 <br/> 
                                     Music is Memory <br/> 
-                                    <br/>
-                                    18:00-20:00 <br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    20:00 - 22:00 <br/>
                                     The Blackout Show<br/>
-                                    <br/>
-                                    22:00-00:00 <br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    22:00 - 00:00 <br/>
                                     The One With The Metal<br/>
+                                    </p>
+                                    </div> 
+                            
 
-                                </div>
+
                                 <div className="Friday">
-                                
-                                </div>
-                                <div className="Saturday">6</div>
-                                <div className="Sunday">7</div>
-                              </div> 
-                                
+                                <h4 className="Scedutitle">FRIDAYS</h4>
+                                <p style={{color:"#76cdd9"}}> 
+                                    16:20 - 19:20 <br/> 
+                                    Λεμονοπιτα με Τσιλι <br/> 
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    20:00 - 22:00 <br/>
+                                    Voyage<br/>
+                                    </p>
+                                    <p style={{color:"#ec7323"}}> 
+                                    22:00 - 00:00 <br/>
+                                    Misfits Sessions<br/>
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <h4 className="Scedutitle">SUNDAYS</h4>
+                                    <p style={{color:"#ec7323"}}> 
+                                    20:00 - 22:00<br/>
+                                    Fairy Tale<br/>
+                                    </p>
+                                    </div>
+
                               </div>
                             </div>
                               
                           </Popup>
-                          <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}> SUPPORT</button>}
+                          {<Popup trigger={<button className="menubutt" style={{color:this.state.color1}}>SUPPORT</button>}
                             position="right center" 
                             modal
                             closeOnDocumentClick>
-                              <div className="schedule">
-                                <h2  className = "shed" >ABOUT LEMONI RADIO</h2>
-                                Do something to support
-
+                              <div className="donateto">
+                                <div className="aboutlemon">
+                                <h2  className = "shed" >SHOW LOVE AND DONATE NOW</h2>
+                                <h4 className = "subshed">We rely on you to keep streaming </h4>
+                                <br/>
+                                <p>
+                                Όλη η προσπάθεια και η δέσμευσή μας, είναι να κάνουμε ένα ραδιόφωνο που να σέβεται το κοινό μας, αυτό το κοινό που κουράστηκε με τους συνήθεις, 
+                                νευρωτικούς ραδιοφωνικούς ρυθμούς, τα επίμονα σήματα, τις κακές μουσικές, τις πολλές και ενοχλητικές διαφημίσεις, την επικέντρωση σε τελείως ανούσια θέματα 
+                                και το ασταμάτητο κράξιμο πώλησης πάσης φύσεως προϊόντων. Αν είσαι σε αυτό το κοινό, που αγαπάει το ραδιόφωνο, που λαχταρά να ακούσει καλό ραδιόφωνο, 
+                                που εκτιμάει το αυθεντικό, το οργανικό, το ελεύθερο… και πιστεύεις ότι πρέπει να υπάρχουμε και να ακουγόμαστε τότε η κάθε στήριξή σου, ο κάθε οβολός σου, είναι 
+                                σημαντικά για μας! Το σίγουρο είναι ότι τα χρήματά σας, θα μας δίνουν τη δυνατότητα να κάνουμε όλο και καλύτερο ραδιόφωνο!                             
+                                </p>
+                                <br/>
+                                <Button className="suppbut" variant="light" href="https://www.paypal.com/donate/?hosted_button_id=G6WVFGXZUY8U4&fbclid=IwAR17Byj-ups5Wxz0R2qqBMesQF5UGhcMMUf-chfYM5yAOqqVQkcFfTmhc34">KEEP STREAMING</Button>
+                                </div>
                               </div>
-                          </Popup>
-                          <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}> CONTACT</button>}
+                          </Popup>}
+                          
+                         { <Popup trigger={<button className="menubutt" style={{color:this.state.color1}}>PRODUCERS</button>}
                           position="right center" 
                           modal
                           closeOnDocumentClick>
                             <div className="schedule">
                                   <h2 className = "shed" >CONTACT LEMONI RADIO</h2>
                     
-                                  <SocialFollow />
                           </div>
-                        </Popup>
+                        </Popup> }
                       </Nav>
                     </Navbar.Collapse>
             </Navbar>          
           </Container>
 
 
-        <Container>
+        <Container className = "cont1">
         <Row>
           <Col md={5} className = "px-0">
           <Player >
@@ -412,21 +445,23 @@ class App extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col  md={5} className = "px-0 my-5">
-              <button className = "zonebutt p-0" onClick={this.handleClick}>   
-              {this.state.isToggleOn ? 'ON' : 'OFF'}
-   
-                <Zones></Zones>
-                </button>
+          <Col  md={5} className = "px-0 my-5">              
+                <Zonetxt/>
           </Col>
 
-          <Col md={{ span: 5, offset: 1 }} className = "px-0 murmurcont">
-                <div  style = {{color:this.state.color2}} >
+          <Col md={{ span: 5, offset: 1 }} className = "px-0 murmurcont h-100 d-flex flex-column ">
+                <div className="murmurcont"  style = {{color:this.state.color2}} >
             
                   <p style = {{color:this.state.color2}}className="murmur">MURMUR BOX</p>
                     
-                  <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="400px"   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="auto" title="myFrame"> </iframe>	
+                  <iframe  className="mur" src="https://www5.cbox.ws/box/?boxid=918315&boxtag=bfr6Pj" width="100%" height="220%"   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="auto" title="myFrame" > </iframe>	
+
                 </div>
+               
+          </Col>
+          <Col md={1}>
+          <SocialFollow />
+
           </Col>
         </Row>
       </Container>
@@ -435,10 +470,10 @@ class App extends React.Component {
       
 <Container>
           <Row>
-            <Col >
+            <Col  md={12} className = "px-0">
                 <footer className="App-footer">
                   <div className="footerText">
-                    <p style={{color:this.state.color2}}>© 2020, Lemoni Radio </p>
+                    <p style={{color:this.state.color2 }}>© 2020, Lemoni Radio </p>
                   </div>        
                 </footer>
             </Col>

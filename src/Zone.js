@@ -9,7 +9,7 @@ class Zones extends Component{
     constructor(){
         super();
         this.state = {
-            zone: zone1
+            zone: ""
 
         };
         this.changezone = this.changezone.bind(this);

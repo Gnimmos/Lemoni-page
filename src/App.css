@@ -62,7 +62,7 @@
      }
   
     .grid-1{
-      background-image: linear-gradient(#7f4098 .5px, transparent .5px ), linear-gradient(90deg,#7f4098 .5px, transparent .05em );
+      background-image: linear-gradient(#7f4098 .5px, transparent .05em ), linear-gradient(90deg,#7f4098 .5px, transparent .05em );
       background-size: 60px 60px;  
       overflow-y: scroll;
       overflow-x: hidden;
@@ -73,7 +73,7 @@
       height: 100%;
     }
     .grid-2{
-      background-image: linear-gradient(#fde146 .5px, transparent .5px ), linear-gradient(90deg,#fde146 .5px, transparent .05em );
+      background-image: linear-gradient(#fde146 .5px, transparent .05em ), linear-gradient(90deg,#fde146 .5px, transparent .05em );
       background-size: 60px 60px;  
       overflow-y: scroll;
       overflow-x: hidden;
@@ -84,7 +84,7 @@
       height: 100%;
     }
     .grid-3{
-      background-image: linear-gradient(#76cdd9 .5px, transparent .5px ), linear-gradient(90deg,#76cdd9 .5px, transparent .05em );
+      background-image: linear-gradient(#76cdd9 .5px, transparent .05em ), linear-gradient(90deg,#76cdd9 .5px, transparent .05em );
       background-size: 60px 60px;  
       overflow-y: scroll;
       overflow-x: hidden;
@@ -95,7 +95,7 @@
       height: 100%;
     }
     .grid-4{
-      background-image: linear-gradient(#be1e2d .5px, transparent .5px ), linear-gradient(90deg,#be1e2d .5px, transparent .05em );
+      background-image: linear-gradient(#be1e2d .50px, transparent .05em ), linear-gradient(90deg,#be1e2d .50px, transparent .05em );
       background-size: 60px 60px;  
       overflow-y: scroll;
       overflow-x: hidden;
@@ -116,13 +116,18 @@
       
     }
     .murmurcont{
-      margin-top: -100px;
+      margin-top: -6%;
       font-family: 'Trim';
+      height: max-content;
+      height: 220%;
+
     }
     .murmur{
       align-content: center;
       align-items: center;
       font-family: 'Trim';
+      font-size: 20px;
+
 
     }
   
@@ -140,7 +145,7 @@
     height: 30px;
     align-self: center;
   }
-  .aboutlemoni .aboutlemon{  
+  .aboutlemoni .aboutlemon {  
     font-family: 'SCP';
     align-items: center;
     align-content: center;
@@ -148,45 +153,78 @@
     border-color: transparent;
     background-color: black;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     position:fixed;
-    top:5%;
-    left:center;
-    width: 40%;
-    height: 80%;
+    top:10%;
+    left:25%;
+    width: 50%;
+    height: 60%;
     font-size: 15px;
     text-align: left;
     color: white;
     
   }
+  .aboutlemon{
+    margin-top:6%;
+    margin-left:6%;
+    margin-bottom:6%;
+    margin-right:6%;
+  }
   .schedule{
     font-family: 'SCP';
-    align-items: center;
+    align-items: left;
     align-content: center;
     background-color: transparent;
     border-color: transparent;
     background-color: black;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     position:fixed;
     font-size: 10px;
-    top:5%;
-    left:center;
-    width: 40%;
-    height: 80%;
+    top:10%;
+    left:25%;
+    width: 50%;
+    height: 60%;
     text-align: left;
     background-color: black;
     color: white;
-
     font-size: 15px;
-  
+  }
+  .donateto{
+    font-family: 'SCP';
+    align-items: left;
+    align-content: center;
+    background-color: transparent;
+    border-color: transparent;
+    background-color: black;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    position:fixed;
+    font-size: 10px;
+    top:10%;
+    left:25%;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size: 15px;
   }
   .shed{
     font-family: 'Trim';
     font-size: 30px;
     background-color: black;
-    color: white;
-  
+    color: white;  
+  }
+  .subshed{
+    font-family: 'Trim';
+    font-size: 20px;
+  }
+  .suppbut{
+    background-color: white;
+    color: black;
+    font-family: 'Trim';
+    font-size: 20px;
   }
   .contact{
     background-color: transparent;
@@ -196,11 +234,52 @@
     align-self: center;
   
   }
+  .mur{
+
+    font-family: 'Trim';
+    font-size: xx-large;
+  }
+  .Scedutitle{
+    font-family: 'Trim';
+
+  }
+
+  .grid-container {
+    margin-top:6%;
+    margin-left:6%;
+    margin-bottom:6%;
+    margin-right:6%;    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+
+
+  }
+  .Sheduling{
+    grid-row: 1 / span 2;
+    grid-column: 1 /span 3;
+
+
+  }
+  .Monday{
+    grid-area: 3 / 1 / 4 / 2 ;
+  }
+  
+  .Wednesday{
+    grid-area: 3 / 2 / 4 / 3 ;
+
+  }
+
+  .Friday{
+    grid-area: 3 / 3 / 4 / 4 ;
+  }
+
+
   .blockclass {
     display: block;
     }
   .App-footer{
-    padding-bottom: 10%;  
+    padding-bottom: 10%; 
+    padding-left: 0%;
   }
   .zonebutt{
     border: transparent;
@@ -210,11 +289,19 @@
   
     border: none;
 }
+.button{
+  left:0% ;
+}
+.cont1{
+  padding-top: 5%;
+
+}
 .social-container {
-  background:black;
-  color :white;
-  padding: 25px 50px;
+  background:transparent;
+  padding: right;
   justify-content: left;
+  margin-top: -100px;
+  
 }
 a.social {
   margin: 0 1rem;
@@ -224,34 +311,60 @@ a.social {
 .social:hover {
   transform: translateY(-2px);
 }
-a.youtube {
-  color: #eb3223;
+.Zonetime{
+  font-family: 'SCP';
+  align-items: center;
+  align-content: center;
+  background-color: transparent;
+  border-color: transparent;
+  background-color: black;
+  position:fixed;
+  top:40%;
+  left:40%;
+  width: 550px; 
+  height: 250px;
+  font-size: 15px;
+  text-align: left;
+  color: white;
+}
+.Zoneloc{
+  margin-top:6%;
+  margin-left:6%;
+  margin-bottom:6%;
+  margin-right:6%;
+
+
 }
 
-a.facebook {
-  color: #4968ad;
-}
-
-a.twitter {
-  color: #49a1eb;
-}
-
-a.instagram {
-  background-color: white;
-  color: black;
-}
     @media only screen and (max-width: 720px) {
       .murmurcont{
         width: 100%;
-        height: 100%;
+        height: 450px;
         align-self: flex-end;
         padding-left: 0%;
         padding-top: 5%;
         margin-top: 10px;
         font-family: 'Trim';
       }
-      .zonebutt{
-        border: transparent;
-        background-color: transparent;
+      .mur{
+        width: 100%;
+        height: 300px;
+        font-family: 'Trim';
+        font-size: 14;
+      }
+        .App-footer{
+        padding-bottom: 0%; 
+        padding-left: 0%;
+      }
+      .schedule{
+        left:10% ;
+        width: 80%;
+      }
+      .Zonetime{
+        top:65%;
+        left:1%;
+        width: 100%; 
+        height: 100%;
+        font-size: 15px;
       }
     }
