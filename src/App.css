@@ -248,11 +248,7 @@
     margin-top:6%;
     margin-left:6%;
     margin-bottom:6%;
-    margin-right:6%;    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
-
-
+    margin-right:6%;    
   }
   .Sheduling{
     grid-row: 1 / span 2;
@@ -367,4 +363,5 @@ a.social {
         height: 100%;
         font-size: 15px;
       }
+
     }

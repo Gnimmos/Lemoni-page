@@ -22,10 +22,10 @@ class Player extends React.Component {
     mute:false, 
     unmute:true,   
     isHovering: false,
-    discolor:"playercontainer-1",
-    playcolor: "playbutt-1",
-    volcolor: "vol-1",
-    twichcol: "twitch-1",
+    discolor:"",
+    playcolor: "",
+    volcolor: "",
+    twichcol: "",
   };
   handleMouseHover = this.handleMouseHover.bind(this);
   changecolor = this.changecolor.bind(this);

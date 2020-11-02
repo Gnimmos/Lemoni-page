@@ -9,25 +9,25 @@ import logo3 from './logos/LOGO-Mellow-zone.png'
 import logo4 from './logos/LOGO-Twilight-zone.png'
 import { Element, Events, animateScroll as scroll, scroller } from 'react-scroll'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar, Nav, Card, Button} from 'react-bootstrap';
+import {Navbar, Nav, Button} from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
-import Media from 'react-bootstrap/Media'
 import SocialFollow from "./social";
-import Zonetxt from './Zonetxt'
+import Zonetxt from './Zonetxt';
+import Schedule from './Schedule';
+import Producers from './Producers';
 
 class App extends React.Component {
-    //changing backrounds
     constructor(props){
       super(props);
     
     
 
       this.state = {
-          color1: '#0e2539', 
-          color2: '#7f4098',
-          changeback :"App",
-          checkgrid:"grid",
-          logo : logo1,
+          color1: '#ffffff', 
+          color2: '#ffffff',
+          changeback :"",
+          checkgrid:"",
+          logo : "",
           zonetxt : "",
           isToggleOn: true,
     
@@ -275,25 +275,7 @@ class App extends React.Component {
                                   ορισμούς τους. Energetic, Mellow Twilight και Deep.  Το Λεμόνι είναι μια μουσική πλατφόρμα πάνω στην οποία έρχονται και αποκτούν γεύση διάφορα ακούσματα απο τις εκπομπές οι οποίες 
                                   έχουν κάτι το πολύ ιδιαίτερο να προσφέρουν με περιεχόμενο μουσικό, θεματολογικό ή φιλοσοφικό μέχρι ένθετα και ατάκες απο την καθημερινότητα μας. 
 
-                                {/* <Media>
-                                <Media.Body>
-                                <img
-                                  width={64}
-                                  height={64}
-                                  className="ml-3"
-                                  src={this.state.logo}
-                                  alt="Generic placeholder"
-                                />
-                                  <h5>Media Heading</h5>
-                                  <p>
-                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                                    ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
-                                    tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-                                    Donec lacinia congue felis in faucibus.
-                                  </p>
-                                </Media.Body>
-
-                              </Media> */}
+                                {/* */}
 
                               </Element>
                               </div>
@@ -302,101 +284,7 @@ class App extends React.Component {
                             position="right center" 
                             modal
                             closeOnDocumentClick>
-                              <div className="schedule" >
-                              
-                                <div className="grid-container">
-                                <div className="Sheduling"><h2 className = "shed">SCHEDULE</h2></div>
-                                <br/>
-                                <br/>
-                                <div className="Monday">
-                                    <h4 className="Scedutitle">MONDAYS</h4>
-                                    <p style={{color:"#76cdd9"}}> 
-
-                                    16:00 - 18:00 <br/> 
-                                    Yas Show <br/> 
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-
-                                    18:00 - 20:00 <br/>
-                                    Meeting Points<br/>
-                                    </p>
-                                    <br/>
-                                    <br/>
-                                    <h4 className="Scedutitle">TUESDAYS</h4>
-                                    <p style={{color:"#76cdd9"}}> 
-
-                                    16:00 - 18:00 <br/> 
-                                    Όλα ΖΕΝ<br/> 
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-
-                                    18:00 - 20:00 <br/>
-                                    Κυτταρίνη και άλλες<br/> Ουσίες<br/>
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    22:00 - 00:00 <br/>
-                                    Technical Midweek<br/> Issues<br/>
-                                    </p>
-                                </div>
-
-                                <div className="Wednesday">
-                                <h4 className="Scedutitle">WEDNESDAYS</h4>
-                                <p style={{color:"#ec7323"}}> 
-                                    18:00 - 20:00 <br/>
-                                    Kenny Sounds<br/>
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    20:00 - 22:00 <br/>
-                                    Ήχοι της Γειτονιας<br/>
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    22:00 - 00:00 <br/>
-                                    Ρεμπετικη Γευση<br/>
-                                    </p>
-                                    <br/>
-                                    <br/>
-                                    <h4 className="Scedutitle">THURSDAYS</h4>
-                                    <p style={{color:"#ec7323"}}> 
-                                    18:00 - 20:00 <br/> 
-                                    Music is Memory <br/> 
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    20:00 - 22:00 <br/>
-                                    The Blackout Show<br/>
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    22:00 - 00:00 <br/>
-                                    The One With The Metal<br/>
-                                    </p>
-                                    </div> 
-                            
-
-
-                                <div className="Friday">
-                                <h4 className="Scedutitle">FRIDAYS</h4>
-                                <p style={{color:"#76cdd9"}}> 
-                                    16:20 - 19:20 <br/> 
-                                    Λεμονοπιτα με Τσιλι <br/> 
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    20:00 - 22:00 <br/>
-                                    Voyage<br/>
-                                    </p>
-                                    <p style={{color:"#ec7323"}}> 
-                                    22:00 - 00:00 <br/>
-                                    Misfits Sessions<br/>
-                                    </p>
-                                    <br/>
-                                    <br/>
-                                    <h4 className="Scedutitle">SUNDAYS</h4>
-                                    <p style={{color:"#ec7323"}}> 
-                                    20:00 - 22:00<br/>
-                                    Fairy Tale<br/>
-                                    </p>
-                                    </div>
-
-                              </div>
-                            </div>
+                             <Schedule/>
                               
                           </Popup>
                           {<Popup trigger={<button className="menubutt" style={{color:this.state.color1}}>SUPPORT</button>}
@@ -425,10 +313,7 @@ class App extends React.Component {
                           position="right center" 
                           modal
                           closeOnDocumentClick>
-                            <div className="schedule">
-                                  <h2 className = "shed" >CONTACT LEMONI RADIO</h2>
-                    
-                          </div>
+                            <Producers/>
                         </Popup> }
                       </Nav>
                     </Navbar.Collapse>
