@@ -72,20 +72,21 @@ import {
       <div class="social-container">
         <div className="row" >    
           <div className="col" >  
-            <a href="https://www.youtube.com/channel/UCPARFXwIX7vNVZDmnJoMn6w" className="youtube social">
-            <FontAwesomeIcon icon={faYoutube} size="60px" color={this.state.color1}/>
+          {/* a.social font-size */}
+            <a href="https://www.youtube.com/channel/UCPARFXwIX7vNVZDmnJoMn6w"  target="blank" className="youtube social">
+            <FontAwesomeIcon icon={faYoutube} color={this.state.color1}/>
             </a>
-            <a href="https://www.mixcloud.com/LemoniRadio/?fbclid=IwAR3bxFbeTkI_b5mZ39qCBHexK9UChil1Ym_uRBXkVip1lxLNiLqlYEXgWUU" className="mixclud social" >
-            <FontAwesomeIcon icon={faMixcloud} size="60px" color={this.state.color1}/>
+            <a href="https://www.mixcloud.com/LemoniRadio/?fbclid=IwAR3bxFbeTkI_b5mZ39qCBHexK9UChil1Ym_uRBXkVip1lxLNiLqlYEXgWUU"  target="blank" className="mixclud social" >
+            <FontAwesomeIcon icon={faMixcloud} color={this.state.color1}/>
             </a>
-            <a href="https://www.twitch.tv/lemoniradio" className="twitter social">
-            <FontAwesomeIcon icon={faTwitch} size="60px" color={this.state.color1}/>
+            <a href="https://www.twitch.tv/lemoniradio"  target="blank" className="twitter social">
+            <FontAwesomeIcon icon={faTwitch}  color={this.state.color1}/>
             </a>
-            <a href="https://www.facebook.com/lemoniradio" className="facebook social">
-            <FontAwesomeIcon icon={faFacebook} size="60px"  color={this.state.color1}/>
+            <a href="https://www.facebook.com/lemoniradio"  target="blank" className="facebook social">
+            <FontAwesomeIcon icon={faFacebook} color={this.state.color1}/>
             </a>
-            <a href="https://www.instagram.com/lemoniradio/"className="instagram social">
-            <FontAwesomeIcon icon={fab,faInstagram} size="60px" color={this.state.color1}/>
+            <a href="https://www.instagram.com/lemoniradio/"  target="blank" className="instagram social">
+            <FontAwesomeIcon icon={fab,faInstagram} color={this.state.color1}/>
             </a>
             </div>
           </div>

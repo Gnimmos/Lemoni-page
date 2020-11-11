@@ -10,7 +10,7 @@ import ReactPlayer from 'react-player'
 import Popup from "reactjs-popup";
 import cameraVideo from '@iconify/icons-clarity/video-camera-solid';
 import playPause0 from '@iconify/icons-gg/play-pause';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 class Player extends React.Component {
@@ -22,6 +22,7 @@ class Player extends React.Component {
     mute:false, 
     unmute:true,   
     isHovering: false,
+    isNotHovering : true,
     discolor:"",
     playcolor: "",
     volcolor: "",
@@ -43,6 +44,7 @@ class Player extends React.Component {
   toggleHoverState(state) {
     return {
       isHovering: !state.isHovering,
+      isisNotHovering: !state.isNotHovering
     };
   }
 
@@ -184,35 +186,39 @@ class Player extends React.Component {
 
 
         {/* Display the metadate from class */}
-        <Row className = "adjustdis" >
+        <Row  >
           <Display/>
         </Row>
-        <Row className = "adjustcont" >
+        <Row  >
         {/* toggle play and pause on click and show icons */}
+        <Col className = " px-0 colplay "  md={2}>
       
-        <button className = {this.state.playcolor} onClick={this.togglePlay } >{this.state.play ?  <Icon icon={playPause0}width="30" height="30" /> : <Icon icon={playIcon}  width="30" height="30" />}</button>
-
+        <button className = {this.state.playcolor } onClick={this.togglePlay } >{this.state.play ?  <Icon icon={playPause0} width="33" height="33" /> : <Icon icon={playIcon}  width="35" height="35" />}</button>
+        </Col >
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
         delay the hover of muse disapear over the colume button so the bar is does not immidietly hide */}
-        <div className = "volume">
-        <button className ={this.state.volcolor} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} onClick={this.toggleMute } >
-          {this.state.mute ?<Icon icon={volumeOff} width="30" height="30"/>: <Icon icon={volumeHigh} width="30" height="30" /> }
+
+        <Col  className = " px-2 colvol " md={2} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} >
+        <button className ={this.state.volcolor}  onClick={this.toggleMute } >
+          {this.state.mute ?<Icon icon={volumeOff} width="35" height="35"/>: <Icon icon={volumeHigh} width="35" height="35" /> }
         
           </button>
-          {
+        {
           this.state.isHovering &&
           <Slider style = {volu}
-          className ="vol"
+          color="gray"
           settings={{
-            start: 0.5,
+            start: this.state.volume,
             min: this.state.min,
             max: this.state.max,
             step: 0.1,
             onChange: this.handleOnChange          
             }}  />
-        }
-          </div>
+        } 
+          </Col>
                   {/* pop up window for video live stream */}
+          <Col className = " px-12 colvid" >
+
         <Popup trigger={<button className={this.state.twichcol} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
             position="right center" 
             modal
@@ -222,6 +228,7 @@ class Player extends React.Component {
 
               </div>
         </Popup>
+        </Col>
 
         </Row>
       </div>

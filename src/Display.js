@@ -1,7 +1,6 @@
 import React,   { Component } from 'react';
 import './Display.css'
 
-
 class Display extends Component{
     constructor(){
         super();
@@ -11,14 +10,14 @@ class Display extends Component{
             song : "",
             songs: [],
             error: null,
-      isLoaded: false,
-      items: [],
-      color2: '#7f4098',
-      zone:"",
-      distime:"",
+            isLoaded: false,
+            items: [],
+            color2: '#7f4098',
+            zone:"Zone",
+            distime:"",
 
         };
-        this.change2 = this.change2.bind(this);
+        this.change = this.change.bind(this);
         this.getTime = this.getTime.bind(this);
 
 
@@ -44,7 +43,7 @@ class Display extends Component{
             }
           )
       }
-      change2 (){
+      change (){
         var hours = new Date().getHours(); //Current Hours
         var hour = hours.toString();
         //Setting colors dipenting on time
@@ -76,14 +75,11 @@ class Display extends Component{
         }
         else 
         {
-          this.setState({ 
-            color1: '#be1e2d'
-          });
           this.setState({
             zone:"TWILITGHT ZONE"
           });
         }
-        console.log(this.state.color1)
+        console.log(this.state.zone)
   
       }
       getTime (){
@@ -103,7 +99,7 @@ class Display extends Component{
             this.fetchsongs();
         }, 10000); 
         this.timerID = setInterval(
-          () => this.change2,
+          () => this.change(),
           1000
         );
         this.timerID = setInterval(
@@ -114,7 +110,7 @@ class Display extends Component{
     
     componentWillUnmount() {
 
-      this.change2();
+      this.change();
     }
       render() {
         const { error, isLoaded, songs } = this.state;
@@ -123,16 +119,19 @@ class Display extends Component{
         if (error) {
           return <div style={{color:this.state.color1}}>Error: {error.message}</div>;
         } else if (!isLoaded) {
-        return <span style={{color:this.state.color1}}>Loading...</span>;
+        return <span style={{color:this.state.color1}}><h1>Loading...</h1></span>;
         }  else if (!songs){
             return<div>Empty</div>;
         } else {
           return (
                 <div className="disp" key={songs.title}>
                  <h1 className="dispzone" style={{color:this.state.color1}}>{this.state.zone}</h1>
-                 <h1 className="distime" style={{color:this.state.color1}}>{this.state.distime}</h1>
-                 <h2  className="dispnow" style={{color:this.state.color1}}>NOW PLAYING: </h2>
-                 <p style={{color:this.state.color1}}>{songs.artist} - {songs.title}</p>
+                 <h1 className="distime" style={{color:this.state.color1 }}>{this.state.distime}</h1>
+      <div className="piemmekato">
+        <br />
+      </div>
+                 <h2  className="dispnow" style={{color:this.state.color1}}>NOW PLAYING </h2>
+                 <h2 className="songs" style={{color:this.state.color1}}>{songs.artist} - {songs.title}</h2>
                 </div>
               
           );

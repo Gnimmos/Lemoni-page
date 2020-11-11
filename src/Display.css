@@ -13,10 +13,27 @@
 .disp{
     font-weight: 900;
     font-family: 'Trim';
+    line-height: 4px;
+  }
+  .piemmekato{
+    margin-top: 1.5rem ;
   }
 .distime{
   text-align: left;
   font-weight: 900;
   font-family: 'SF';
   font-size: 20px;
+  margin-bottom: 30px;
+}
+.dispnowsong{
+  font-size: 20px;
+  line-height: 3px;
+}
+.songs{
+  font-size: 20px;
+
+}
+.dispnow{
+  font-size: 20px;
+
 }

@@ -155,10 +155,10 @@
     overflow-y: scroll;
     overflow-x: scroll;
     position:fixed;
-    top:10%;
-    left:25%;
+    top:20%;
+    left:15%;
     width: 50%;
-    height: 60%;
+    height: 70%;
     font-size: 15px;
     text-align: left;
     color: white;
@@ -172,7 +172,7 @@
   }
   .schedule{
     font-family: 'SCP';
-    align-items: left;
+    align-items: center;
     align-content: center;
     background-color: transparent;
     border-color: transparent;
@@ -180,19 +180,17 @@
     overflow-y: scroll;
     overflow-x: scroll;
     position:fixed;
-    font-size: 10px;
-    top:10%;
+    top:20%;
     left:25%;
-    width: 50%;
-    height: 60%;
-    text-align: left;
-    background-color: black;
-    color: white;
+    width: 60%;
+    height: 75%;
     font-size: 15px;
+    text-align: left;
+    color: white;
   }
   .donateto{
     font-family: 'SCP';
-    align-items: left;
+    align-items: center;
     align-content: center;
     background-color: transparent;
     border-color: transparent;
@@ -200,15 +198,13 @@
     overflow-y: scroll;
     overflow-x: scroll;
     position:fixed;
-    font-size: 10px;
-    top:10%;
+    top:20%;
     left:25%;
-    width: 50%;
-    height: 50%;
-    text-align: left;
-    background-color: black;
-    color: white;
+    width: 60%;
+    height: 75%;
     font-size: 15px;
+    text-align: left;
+    color: white;
   }
   .shed{
     font-family: 'Trim';
@@ -250,26 +246,7 @@
     margin-bottom:6%;
     margin-right:6%;    
   }
-  .Sheduling{
-    grid-row: 1 / span 2;
-    grid-column: 1 /span 3;
-
-
-  }
-  .Monday{
-    grid-area: 3 / 1 / 4 / 2 ;
-  }
   
-  .Wednesday{
-    grid-area: 3 / 2 / 4 / 3 ;
-
-  }
-
-  .Friday{
-    grid-area: 3 / 3 / 4 / 4 ;
-  }
-
-
   .blockclass {
     display: block;
     }
@@ -290,6 +267,7 @@
 }
 .cont1{
   padding-top: 5%;
+  padding-left: 6%;
 
 }
 .social-container {
@@ -298,11 +276,14 @@
   justify-content: left;
   margin-top: -100px;
   
+  
 }
 a.social {
-  margin: 0 1rem;
+  margin: 1rem;
   transition: transform 250ms;
   display: inline-block;
+  font-size: 1.35rem;
+
 }
 .social:hover {
   transform: translateY(-2px);
@@ -316,7 +297,8 @@ a.social {
   background-color: black;
   position:fixed;
   top:40%;
-  left:40%;
+  bottom: 30%;
+  left:30%;
   width: 550px; 
   height: 250px;
   font-size: 15px;
@@ -328,11 +310,59 @@ a.social {
   margin-left:6%;
   margin-bottom:6%;
   margin-right:6%;
+}
+.colplay{
+    flex: 40px !important;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40px;
+    max-width: 50px;
+    padding-right: 5px;
+}
+.colvid{
+  flex: 40px !important;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40px;
+  width: 30%;
+  padding-right: 5px;
+}
+.colvol{
+  flex: 40px !important;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 40px;
+  max-width: 80px;
+  padding-left: 0%;
+}
+.h1,h1,.h2,h2{
+  margin-bottom: .1rem !important;
 
-
+}
+.stayput{
+  position: relative;
+}
+@media (min-width: 768px)
+{
+  .colplay{
+    max-width: 50px;
+    padding-left: 0%;
+    flex: 40px !important;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 40px;
+  } 
 }
 
     @media only screen and (max-width: 720px) {
+      .colplay{
+        max-width: 50px;
+        padding-left: 0px;
+        flex: 40px !important;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 40px;
+      }
       .murmurcont{
         width: 100%;
         height: 450px;
@@ -357,10 +387,10 @@ a.social {
         width: 80%;
       }
       .Zonetime{
-        top:65%;
-        left:1%;
+        top:35%;
+        left:0%;
         width: 100%; 
-        height: 100%;
+        height: 30%;
         font-size: 15px;
       }
 

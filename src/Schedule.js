@@ -9,15 +9,18 @@ class Schedule extends React.Component{
     }
     render(){
         return (
-                    <div className="schedule" >
-                        <div className="grid-container">              
-                            <Container className = "cont1" >
-                                    <div className="Sheduling"><h2 className = "shed">SCHEDULE</h2></div>
-                            </Container>
-                            <Container className = "cont1">
-                                <Row>
+            <div className="donateto">
+            <div className="aboutlemon">                                              <Row>
+                                      <Col md = {12}>
+                                    <h2 >Schedule</h2>
+                                    <br/>
+                                    <br/>
+                                    </Col>
+                                    </Row>
+                                
+                                <Row md = {4}>
 
-                                    <Col md={4} className="Monday px-0 murmurcont h-100 d-flex flex-column ">
+                                    <Col md={4} className=" h-100 d-flex flex-column ">
 
                                         <h4 className="Scedutitle">MONDAYS</h4>
                                         <p style={{color:"#76cdd9"}}> 
@@ -48,7 +51,7 @@ class Schedule extends React.Component{
                                         Technical Midweek<br/> Issues<br/>
                                         </p>
                                     </Col>
-                                    <Col md={4} className="Wednesday px-0 murmurcont h-100 d-flex flex-column ">
+                                    <Col md={4} className=" h-100 d-flex flex-column ">
                                     <h4 className="Scedutitle">WEDNESDAYS</h4>
                                     <p style={{color:"#ec7323"}}> 
                                         18:00 - 20:00 <br/>
@@ -81,7 +84,7 @@ class Schedule extends React.Component{
 
 
 
-                                    <Col md={4} className="Friday px-0 murmurcont h-100 d-flex flex-column ">
+                                    <Col md={4} className=" h-100 d-flex flex-column ">
                                     <h4 className="Scedutitle">FRIDAYS</h4>
                                     <p style={{color:"#76cdd9"}}> 
                                         16:20 - 19:20 <br/> 
@@ -105,11 +108,9 @@ class Schedule extends React.Component{
                                         
                                 </Col>
                                </Row> 
-
                                
-                         </Container>                     
-                    </div>
-                </div>
+                               </div>
+                               </div>
         );
     }
 }
