@@ -4,7 +4,7 @@ import {
     faYoutube,
     faFacebook,
     faInstagram,
-    faTwitch,fab,
+    faTwitch,
     faMixcloud,
   } from "@fortawesome/free-brands-svg-icons";
 
