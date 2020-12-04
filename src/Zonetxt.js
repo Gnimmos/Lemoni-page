@@ -10,9 +10,11 @@ class Zonestxt extends React.Component {
         super(props);
       
       
-  
+
         this.state = {
             zonetxt : "",
+            loading: true,
+
         };
          //binding the functions to the class
     this.changetext = this.changetext.bind(this);
@@ -34,7 +36,7 @@ class Zonestxt extends React.Component {
     else if (6 <= hour && hour < 12)
     {
         this.setState({ 
-            zonetxt: "The Energetic Zone begins at 6 in the morning and ends at 12 midday, offering an energising mood and a dynamic flow, capable of maintaining morning alertness! Start your day with a little water and a few drops of         lemon juice, make coffee and tune into Lemoni! It will keep you company with its superb sounds and lyrics, in harmony with those morning rhythms."
+            zonetxt: "The Energetic Zone begins at 6 in the morning and ends at 12 midday, offering an energising mood and a dynamic flow, capable of maintaining morning alertness. Start your day with a little water and a few drops of lemon juice, make coffee and tune into Lemoni! It will keep you company with its superb sounds and lyrics, in harmony with those morning rhythms."
 
         });
        
@@ -52,11 +54,16 @@ class Zonestxt extends React.Component {
             zonetxt: "The Twilight Zone welcomes listeners at 6 in the evening and says farewell to the last of them at 12 midnight. Energy and vitality return, the rhythm is raised, this time offering a somewhat darker scene. As time approaches midnight the rush of blood to the head increases, accompanied by a margarita with a slice of lemon and by superb sounds and lyrics in harmony with those evening and night time rhythms."
         });
     }
+    this.setState({
+      loading:false
+    });
   }
   componentDidMount() {
+
     this.timerID = setInterval(
       () => this.changetext(),
       1000
+      
     );
 
 
@@ -67,20 +74,11 @@ class Zonestxt extends React.Component {
 
   }
   render(){
+    if (this.state.loading) { 
+           return null; //app is not ready (fake request is in process)    
+    }
     return (
-    <Popup trigger={<button className = "zonebutt p-0 " >      
-                <Zones></Zones>
-                </button>}
-                            position="center center " 
-                            modal
-                            closeOnDocumentClick>
-                              <div className="Zonetime" >
-                                <div className="Zoneloc">
-                                    <div>{this.state.zonetxt}</div>
-                                </div>
-
-                          </div>
-                          </Popup>
+                  <div className="zonet">{this.state.zonetxt}</div>
     );
   }
 }

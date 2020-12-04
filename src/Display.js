@@ -49,19 +49,12 @@ class Display extends Component{
         //Setting colors dipenting on time
         if (0 <= hour && hour < 6)
         { 
-          this.setState({ 
-            color1: '#7f4098'
-          });
           this.setState({
             zone:"DEEP ZONE"
           });
         }
         else if (6 <= hour && hour < 12)
         {
-          this.setState({ 
-            
-            color1: '#fde146'
-          });
           this.setState({
             zone:"ENERGETIC ZONE"
           });
@@ -125,13 +118,13 @@ class Display extends Component{
         } else {
           return (
                 <div className="disp" key={songs.title}>
-                 <h1 className="dispzone" style={{color:this.state.color1}}>{this.state.zone}</h1>
-                 <h1 className="distime" style={{color:this.state.color1 }}>{this.state.distime}</h1>
-      <div className="piemmekato">
-        <br />
-      </div>
-                 <h2  className="dispnow" style={{color:this.state.color1}}>NOW PLAYING </h2>
-                 <h2 className="songs" style={{color:this.state.color1}}>{songs.artist} - {songs.title}</h2>
+                 <h1 className="dispzone">{this.state.zone}</h1>
+                 <h1 className="distime" >{this.state.distime}</h1>
+                <div className="piemmekato">
+                  <br />
+                </div>
+                 <h2  className="dispnow" >NOW PLAYING </h2>
+                 <h2  className="songs" >{songs.artist} - {songs.title}</h2>
                 </div>
               
           );

@@ -198,7 +198,7 @@ class Player extends React.Component {
         {/* volume slider and mute the mute function i not working corrrectly the slider is working but need to 
         delay the hover of muse disapear over the colume button so the bar is does not immidietly hide */}
 
-        <Col  className = " px-2 colvol " md={2} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} >
+        <Col  className = " px-2 colvol " md={4} onMouseEnter={this.handleMouseHover} onMouseLeave={this.handleMouseHover} >
         <button className ={this.state.volcolor}  onClick={this.toggleMute } >
           {this.state.mute ?<Icon icon={volumeOff} width="35" height="35"/>: <Icon icon={volumeHigh} width="35" height="35" /> }
         

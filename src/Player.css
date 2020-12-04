@@ -2,7 +2,9 @@
     font-family: 'Trim';
     src: local('Trim'), url(./Trim.otf) format('otf');
   }
-
+.colplay{
+    left: -7px !important;
+}
 .playercontainer-1{
     color: #0e2539;
     font-family: 'Trim';

@@ -63,11 +63,9 @@ class Zones extends Component{
     }
       render() {
           return(
-              <div className = "zone-logo">
         
              <img className = "zone-logo" src={this.state.zone} alt="Logo" />
          
-          </div>
           );
 
 
