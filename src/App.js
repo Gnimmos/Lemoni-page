@@ -1,4 +1,4 @@
-import React,   { Component } from 'react';
+import React from 'react';
 import zone1 from './logos/sponsor-banners-deep-zone.png';
 import zone2 from './logos/sponsor-banners-energetic-zone.png';
 import zone3 from './logos/sponsor-banners-mellow-zone.png';
@@ -30,7 +30,6 @@ import Konst from './lemoni_producers/konstantinos.jpg';
 import Orestis from './lemoni_producers/orestes.jpg';
 import talal from './lemoni_producers/talal.jpg';
 import unkown from './lemoni_producers/unknown.jpg'
-import Zones from './Zone';
 import Canna from './Sponsors/cannahealth.png';
 import ola from './Sponsors/oladj.png';
 import crative from './Sponsors/creativeuniverse.png';
