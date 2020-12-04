@@ -86,7 +86,7 @@ import {
             <FontAwesomeIcon icon={faFacebook} color={this.state.color1}/>
             </a>
             <a href="https://www.instagram.com/lemoniradio/"  target="blank" className="instagram social">
-            <FontAwesomeIcon icon={fab, faInstagram} color={this.state.color1}/>
+            <FontAwesomeIcon icon={faInstagram} color={this.state.color1}/>
             </a>
             </div>
           </div>
