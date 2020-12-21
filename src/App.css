@@ -367,6 +367,12 @@ a.social {
 .h1,h1,.h2,h2{
   margin-bottom: .1rem !important;
 
+}     
+ .popup-content {
+  margin: auto;
+  background: transparent;
+  width: 100%;
+  border: none;
 }
 .stayput{
   position: relative;
@@ -445,6 +451,7 @@ button.close, button.close:hover {
         left:10% ;
         width: 80%;
       }
+
       .Zonetime{
         top:35%;
         left:0%;
@@ -465,6 +472,9 @@ button.close, button.close:hover {
       .dispnow{
         font-size: 22px;
       }
+      .video{
+        width: 100%;
+      }
 
     }
 
@@ -478,6 +488,9 @@ button.close, button.close:hover {
         top: 100px !important;
         line-height: 2 !important;
         
+      }
+      .video{
+        width: 100%;
       }
     
 

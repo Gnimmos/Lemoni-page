@@ -390,8 +390,8 @@ changezone (){
                                                                            YAS Show <br/> 
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           18:00 - 20:00 <br/>
-                                                                           Meeting Points<br/>
+                                                                           20:00 - 21:00 <br/>
+                                                                           Manifesto<br/>
                                                                            </p>
 
                                                                            <h4 className="Scedutitle">TUESDAYS</h4>

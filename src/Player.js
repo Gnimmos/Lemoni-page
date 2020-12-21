@@ -6,7 +6,6 @@ import { Icon } from '@iconify/react';
 import playIcon from '@iconify/icons-foundation/play';
 import volumeOff from '@iconify/icons-bx/bxs-volume-mute';
 import volumeHigh from  '@iconify/icons-bi/volume-up-fill';
-import ReactPlayer from 'react-player'
 import Popup from "reactjs-popup";
 import cameraVideo from '@iconify/icons-clarity/video-camera-solid';
 import playPause0 from '@iconify/icons-gg/play-pause';
@@ -223,8 +222,9 @@ class Player extends React.Component {
             position="right center" 
             modal
             closeOnDocumentClick>
-              <div className = "video-wrapper">
-                <ReactPlayer className = "react-player" url='https://www.twitch.tv/lemoniradio' />
+              <div className = "video">
+              <iframe src="https://embed.restream.io/player/index.html?token=8346f0289199979c2c0283ea75d30c16" width="100%" height="400px"  
+                   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame"></iframe>
 
               </div>
         </Popup>
