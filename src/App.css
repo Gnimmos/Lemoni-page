@@ -373,6 +373,7 @@ a.social {
   background: transparent;
   width: 100%;
   border: none;
+  left: 25%;
 }
 .stayput{
   position: relative;
@@ -419,6 +420,9 @@ button.close, button.close:hover {
       .menubutt{
         align-self: flex-end;
 
+      }
+      .popup-content {
+        left: 0%;
       }
       .navbar-collapse , .show, .collapse{
         position: absolute !important;
