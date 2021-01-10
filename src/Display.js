@@ -69,7 +69,7 @@ class Display extends Component{
         else 
         {
           this.setState({
-            zone:"TWILITGHT ZONE"
+            zone:"TWILIGHT ZONE"
           });
         }
         console.log(this.state.zone)
