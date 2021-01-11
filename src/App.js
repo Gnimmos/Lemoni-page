@@ -35,7 +35,6 @@ import ola from './Sponsors/oladj.png';
 import crative from './Sponsors/creativeuniverse.png';
 import Ghofi from './Sponsors/Ghofi.png';
 import Yank from './lemoni_producers/yiangos.jpg';
-import Gni from './lemoni_producers/Gnimmo.jpg';
 import hex from './lemoni_producers/hex.gif';
 import Unnamed from './lemoni_producers/unnamed.jpg'
 import magos from './Sponsors/elephant.png'
@@ -406,6 +405,10 @@ changezone (){
                                                                            Κυτταρίνη και άλλες Ουσίες<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
+                                                                           20:00 - 22:00 <br/>
+                                                                           Hexagon<br/>
+                                                                           </p>
+                                                                           <p style={{color:"#ec7323"}}> 
                                                                            22:00 - 00:00 <br/>
                                                                            Technical Midweek<br/> Issues<br/>
                                                                            </p>
@@ -449,13 +452,10 @@ changezone (){
                                                                            20:00 - 22:00 <br/>
                                                                            Voyage<br/>
                                                                            </p>
-                                                                           <p style={{color:"#ec7323"}}> 
-                                                                           22:00 - 00:00 <br/>
-                                                                           Hexagon<br/>
-                                                                           </p>
+
                                                                            <h4 className="Scedutitle">SATURDAY</h4>
                                                                            <p style={{color:"#76cdd9"}}> 
-                                                                           14:00 - 16:00 <br/>
+                                                                           12:00 - 14:00 <br/>
                                                                            Ρεμπέτικη Γεύση<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
@@ -465,14 +465,6 @@ changezone (){
                                                                            <p style={{color:"#ec7323"}}> 
                                                                            23:00 - 00:00 <br/>
                                                                            Misfits <br/>
-                                                                           </p>
-                                                                           
-                                                                   </Col>
-                                                                   <Col lg={3} className=" h-100 d-flex flex-column ">
-                                                                           <h4 className="Scedutitle">SUNDAYS</h4>
-                                                                           <p style={{color:"#ec7323"}}> 
-                                                                           20:00 - 22:00<br/>
-                                                                           Fairy Tale<br/>
                                                                            </p>
                                                                            
                                                                    </Col>
@@ -860,28 +852,6 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
 
                               <Row className="justify-content-md-center" md={4}>
                               
-                              <Col md={4} className=" h-100 d-flex flex-column ">
-                                <Media>
-                                  <Media.Body>
-                                  <img
-                                    width={150}
-                                    height={150}
-                                    className="ml-3"
-                                    src={Gni}
-                                    alt="Generic placeholder"
-                                  />
-                                                                                                        <br/>
-                                                                      <br/>
-                                    <h5>Fairytale </h5>
-                                    <h5 className="names">GEORGE </h5>
-
-                                    <p className="showname">
-                                    On Sundays night he hosts the radio show FairyTale, with themes of technology, science, astronomy and many more. Always with the texture of Epic music chosen from films and  games related to the day's topic that gives an alternative tone to the radio.
-                                    </p>
-                                  </Media.Body>
-
-                                </Media> 
-                              </Col>
 
                               </Row> 
                                               </div>
