@@ -459,11 +459,7 @@ changezone (){
                                                                            Ρεμπέτικη Γεύση<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           22:00 - 23:00 <br/>
-                                                                           Trance<br/>
-                                                                           </p>
-                                                                           <p style={{color:"#ec7323"}}> 
-                                                                           23:00 - 00:00 <br/>
+                                                                           21:30 - 00:00 <br/>
                                                                            Misfits <br/>
                                                                            </p>
                                                                            
