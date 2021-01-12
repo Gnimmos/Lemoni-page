@@ -884,7 +884,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                                   </Row>
                                 <Row md={4}>
                                   <Col md={1} className = "px-5" target= "blank">
-                                    <a href = "https://cannahealthamsterdam.com/">
+                                    <a href = "https://cannahealthamsterdam.com/" target="blank">
                                   <img
                                                                         width={70}
                                                                         height={70}
