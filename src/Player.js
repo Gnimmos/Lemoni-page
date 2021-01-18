@@ -168,8 +168,6 @@ class Player extends React.Component {
         twichcol:"playbutt-4"
       });
     }
-    console.log(this.state.color1)
-
   }
   
 

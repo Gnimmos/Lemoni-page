@@ -19,7 +19,7 @@ class Display extends Component{
         };
         this.change = this.change.bind(this);
         this.getTime = this.getTime.bind(this);
-
+        this.fetchsongs();
 
     }
     fetchsongs() {
@@ -71,9 +71,7 @@ class Display extends Component{
           this.setState({
             zone:"TWILIGHT ZONE"
           });
-        }
-        console.log(this.state.zone)
-  
+        }  
       }
       getTime (){
         var datetime = new Date();
@@ -89,7 +87,6 @@ class Display extends Component{
       }
       componentDidMount(){
         setInterval(() => {
-            this.fetchsongs();
         }, 10000); 
         this.timerID = setInterval(
           () => this.change(),
@@ -110,6 +107,7 @@ class Display extends Component{
 
 
         if (error) {
+          this.forceUpdate();
           return <div style={{color:this.state.color1}}>Error: {error.message}</div>;
         } else if (!isLoaded) {
         return <span style={{color:this.state.color1}}><h1>Loading...</h1></span>;
