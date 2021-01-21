@@ -96,6 +96,10 @@ class Display extends Component{
           ()=> this.getTime(),
           1000
         );
+        this.timerID = setInterval(
+          ()=> this.fetchsongs(),
+          1000
+        );
     }
     
     componentWillUnmount() {
