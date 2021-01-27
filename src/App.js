@@ -37,8 +37,9 @@ import Ghofi from './Sponsors/Ghofi.png';
 import Yank from './lemoni_producers/yiangos.jpg';
 import hex from './lemoni_producers/hex.gif';
 import Unnamed from './lemoni_producers/unnamed.jpg'
-import magos from './Sponsors/elephant.png'
-
+import magos from './Sponsors/elephant.png';
+import anexitilon from './Sponsors/anexitilon.png';
+import vogus from './Sponsors/Logo-Vogus.png';
 
 class App extends React.Component {
     constructor(props){
@@ -458,12 +459,16 @@ changezone (){
                                                                            </p>
 
                                                                            <h4 className="Scedutitle">SATURDAY</h4>
+                                                                           <p style={{color:"#5eb546"}}>
+                                                                            11:00 - 12:00 <br/>
+                                                                            Voix Multiculturelle <br/>
+                                                                           </p>
                                                                            <p style={{color:"#76cdd9"}}> 
                                                                            12:00 - 14:00 <br/>
                                                                            Ρεμπέτικη Γεύση<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           21:30 - 00:00 <br/>
+                                                                           21:00 - 00:00 <br/>
                                                                            Misfits <br/>
                                                                            </p>
                                                                            
@@ -881,13 +886,13 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                              
 
                                 </div>
-                                <Container>
+                                <Container className ="px-2" >
                                   <Row>
-                                    <Col md = {12} className ="px-5">
+                                     <Col md = {12} >{/*className ="px-5" */}
                                       <h2 className = "shed">THANK YOU</h2></Col>
                                   </Row>
-                                <Row md={4}>
-                                  <Col md={1} className = "px-5" target= "blank">
+                                <Row>
+                                  <Col lg={2}  target= "blank">
                                     <a href = "https://cannahealthamsterdam.com/" target="blank">
                                   <img
                                                                         width={70}
@@ -897,7 +902,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                                                                         alt="Generic placeholder"
                                                                       /></a>
                                   </Col>
-                                <Col  md={{ span: 2, offset: 1 }}>
+                                <Col   md={3}>
                                 <a href = "https://oladj.com/"  target= "blank">
                                 <img
                                                                         width={144}
@@ -907,7 +912,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                                                                         alt="Generic placeholder"
                                                                       /></a>
                                   </Col>
-                                  <Col  md={{ span: 1, offset: 1 }}>
+                                  <Col   lg={3}>
                                   <a href = "http://www.magoscarpets.com/" target= "blank">
 
                                   <img
@@ -918,8 +923,20 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                                                                         alt="Generic placeholder"
                                                                       /></a>
                                   </Col>
-                                  
-                                  <Col  md={{ span: 2, offset: 1 }}>
+                                  <Col  lg={4}>
+                                  <a href = "http://sozmir.ru/"  target= "blank">
+
+                                  <img
+                                                                        width={236}
+                                                                        height={40.12}
+                                                                        className="ml-3"
+                                                                        src={crative}
+                                                                        alt="Generic placeholder"
+                                                                      /></a>
+                                  </Col>
+                                  <br/>
+                                  <br/>
+                                  <Col   lg={{ span: 3}}>
                                   <a href = "https://www.ghofi.com.cy/" target= "blank">
 
                                   <img
@@ -930,14 +947,26 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                                                                         alt="Generic placeholder"
                                                                       /></a>
                                   </Col>
-                                  <Col className = "px-5 my-3 " md={{ span: 4, }}>
-                                  <a href = "http://sozmir.ru/"  target= "blank">
+
+                                  <Col  lg={{ span: 3 }}>
+                                  <a href = "https://www.anexitilon-art.com/index.php/en/"  target= "blank">
 
                                   <img
-                                                                        width={236}
+                                                                        width={156}
                                                                         height={40.12}
                                                                         className="ml-3"
-                                                                        src={crative}
+                                                                        src={anexitilon}
+                                                                        alt="Generic placeholder"
+                                                                      /></a>
+                                  </Col>
+                                  <Col lg={{ span: 3}}>
+                                  <a href = "https://vogusphotography.com/"  target= "blank">
+
+                                  <img
+                                                                        width={110}
+                                                                        height={60}
+                                                                        className="ml-3"
+                                                                        src={vogus}
                                                                         alt="Generic placeholder"
                                                                       /></a>
                                   </Col>

@@ -403,6 +403,11 @@ button.close, button.close:hover {
     flex-shrink: 1;
     flex-basis: 40px;
   } 
+  .row-cols-md-4 > * {
+    flex: 0 0 15%;
+    max-width: 25%;
+    }
+
 }
 
     @media only screen and (max-width: 720px) {
@@ -497,6 +502,10 @@ button.close, button.close:hover {
         width: 100%;
       }
     
-
+      .row-cols-md-4 > * {
+        flex: 0 0 15%;
+        max-width: 25%;
+        }
+    
     }
 
