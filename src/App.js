@@ -379,9 +379,9 @@ changezone (){
                                                                        </Col>
                                                                        </Row>
                                                                    
-                                                                   <Row md = {4}>
+                                                                   <Row >
                                    
-                                                                       <Col lg={3} className=" h-100 d-flex flex-column ">
+                                                                       <Col lg={4} className=" h-100 d-flex flex-column ">
                                    
                                                                            <h4 className="Scedutitle">MONDAYS</h4>
                                                                            <p style={{color:"#76cdd9"}}> 
@@ -418,7 +418,7 @@ changezone (){
                                                                            Technical Midweek<br/> Issues<br/>
                                                                            </p>
                                                                        </Col>
-                                                                       <Col lg={3} className=" h-100 d-flex flex-column ">
+                                                                       <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                        <h4 className="Scedutitle">WEDNESDAYS</h4>
                                                                        <p style={{color:"#ec7323"}}> 
                                                                            18:00 - 20:00 <br/>
@@ -447,7 +447,7 @@ changezone (){
                                    
                                    
                                    
-                                                                       <Col lg={3} className=" h-100 d-flex flex-column ">
+                                                                       <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                        <h4 className="Scedutitle">FRIDAYS</h4>
                                                                        <p style={{color:"#76cdd9"}}> 
                                                                            16:20 - 19:20 <br/> 
