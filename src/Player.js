@@ -63,7 +63,7 @@ class Player extends React.Component {
   // play/pause
   togglePlay = () => {
     this.setState({ play: !this.state.play }, () => {
-      this.state.play ? this.audio.play() : this.audio.pause();
+      this.state.play ? this.audio.play() : this.audio.stop();
     });
   }
   //hadler of slider

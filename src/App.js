@@ -450,7 +450,7 @@ changezone (){
                                                                        <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                        <h4 className="Scedutitle">FRIDAYS</h4>
                                                                        <p style={{color:"#76cdd9"}}> 
-                                                                           16:20 - 19:20 <br/> 
+                                                                           16:20 - 18:20 <br/> 
                                                                            Λεμονόπιτα με Τσίλι <br/> 
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
