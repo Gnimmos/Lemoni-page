@@ -497,7 +497,7 @@ changezone (){
                                                                   <br/>
                                                                   </Col>
                                                                   </Row>
-                                                              <Row  md={4}>
+                                                                  <Row  md={4}>
                               
                                                               <Col md={4} className="   h-100 d-flex flex-column ">
                                                                     <Media>
