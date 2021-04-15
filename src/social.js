@@ -69,7 +69,7 @@ import {
   }
   render(){
     return (
-      <div class="social-container">
+      <div className="social-container">
         <div className="row" >    
           <div className="col" >  
           {/* a.social font-size */}

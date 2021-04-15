@@ -105,6 +105,7 @@ class Display extends Component{
     componentWillUnmount() {
 
       this.change();
+      this.fetchsongs();
     }
       render() {
         const { error, isLoaded, songs } = this.state;

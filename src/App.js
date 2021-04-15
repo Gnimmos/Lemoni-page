@@ -397,13 +397,12 @@ changezone (){
                                                                            20:00 - 21:00 <br/>
                                                                            Manifesto<br/>
                                                                            </p>
+                                                                           <p style={{color:"#ec7323"}}> 
+                                                                           21:30 - 22:30 <br/>
+                                                                           The BellDonkeys<br/>
+                                                                           </p>
 
                                                                            <h4 className="Scedutitle">TUESDAYS</h4>
-                                                                           <p style={{color:"#76cdd9"}}> 
-                                   
-                                                                           16:00 - 18:00 <br/> 
-                                                                           Όλα ΖΕΝ<br/> 
-                                                                           </p>
                                                                            <p style={{color:"#ec7323"}}> 
                                    
                                                                            18:00 - 20:00 <br/>
@@ -420,6 +419,11 @@ changezone (){
                                                                        </Col>
                                                                        <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                        <h4 className="Scedutitle">WEDNESDAYS</h4>
+                                                                       <p style={{color:"#76cdd9"}}> 
+                                   
+                                                                        16:00 - 17:00 <br/> 
+                                                                        Feelings Zone<br/> 
+                                                                        </p>
                                                                        <p style={{color:"#ec7323"}}> 
                                                                            18:00 - 20:00 <br/>
                                                                            Kenny Sounds<br/>
@@ -428,9 +432,18 @@ changezone (){
                                                                            20:00 - 22:00 <br/>
                                                                            Ήχοι της Γειτονιάς<br/>
                                                                            </p>
+                                                                           <p style={{color:"#ec7323"}}> 
+                                                                           22:00 - 00:00 <br/>
+                                                                           "Θα Σου Μάθω Καψούρα"<br/>
+                                                                           </p>
 
 
                                                                            <h4 className="Scedutitle">THURSDAYS</h4>
+                                                                           <p style={{color:"#76cdd9"}}> 
+                                   
+                                                                          15:00 - 17:00 <br/> 
+                                                                          Radio Frames<br/> 
+                                                                          </p>
                                                                            <p style={{color:"#ec7323"}}> 
                                                                            18:00 - 20:00 <br/> 
                                                                            Music is Memory <br/> 
@@ -453,6 +466,11 @@ changezone (){
                                                                            16:20 - 18:20 <br/> 
                                                                            Λεμονόπιτα με Τσίλι <br/> 
                                                                            </p>
+                                                                           <p style={{color:"#ec7323"}}> 
+                                                                           18:20 - 19:20 <br/>
+                                                                           Ο Μπουφετζής<br/>
+                                                                           </p>
+
                                                                            <p style={{color:"#ec7323"}}> 
                                                                            20:00 - 22:00 <br/>
                                                                            Voyage<br/>
