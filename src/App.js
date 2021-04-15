@@ -515,9 +515,9 @@ changezone (){
                                                                   <br/>
                                                                   </Col>
                                                                   </Row>
-                                                                  <Row  md={4}>
+                                                                  <Row  lg={4}>
                               
-                                                              <Col md={4} className="   h-100 d-flex flex-column ">
+                                                                  <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                     <Media>
                                                                       <Media.Body>
                                                                       <img
@@ -539,7 +539,7 @@ changezone (){
                               
                                                                     </Media> 
                                                                   </Col>
-                                                                  <Col md={4} className="  h-100 d-flex flex-column ">
+                                                                  <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                     <Media>
                                                                       <Media.Body>
                                                                       <img
@@ -562,7 +562,7 @@ changezone (){
                                                                     </Media> 
                                                                   </Col>
                               
-                                                                  <Col md={4} className=" h-100 d-flex flex-column ">
+                                                                  <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                     <Media>
                                                                       <Media.Body>
                                                                       <img
@@ -586,9 +586,9 @@ changezone (){
                                                              </Row> 
                                                              <br/>
                               
-                                                             <Row className="justify-content-md-center" md={4}>
+                                                             <Row  lg={4}>
                               
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                             <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -609,7 +609,7 @@ changezone (){
                               
                                                                 </Media> 
                                                               </Col>
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -632,7 +632,7 @@ changezone (){
                                                                 </Media> 
                                                               </Col>
                               
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -657,9 +657,9 @@ changezone (){
                                                               </Row>
                                                              <br/>
                               
-                                                              <Row className="justify-content-md-center" md={4}>
+                                                             <Row  lg={4}>
                               
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -681,7 +681,7 @@ changezone (){
                               
                                                                 </Media> 
                                                               </Col>
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -704,7 +704,7 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
                               
                                                                 </Media> 
                                                               </Col>                           
-                                                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                                                 <Media>
                                                                   <Media.Body>
                                                                   <img
@@ -729,9 +729,9 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
                                                               </Row> 
                                                               <br/>
 
-                                                              <Row className="justify-content-md-center" md={4}>
+                                                              <Row  lg={4}>
                               
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                                                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -752,7 +752,7 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
 
                                 </Media> 
                               </Col>
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -775,7 +775,7 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
 
                                 </Media> 
                               </Col>                           
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -799,10 +799,10 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
                               </Col>
                               </Row> 
                               <br/>
-
-                              <Row className="justify-content-md-center" md={4}>
                               
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                              <Row  lg={4}>
+                              
+                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -824,7 +824,7 @@ Join Talal as he takes us down these memory isles every Thursday from 6p.m Cypru
 
                                 </Media> 
                               </Col>
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -848,7 +848,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
 
                                 </Media> 
                               </Col>                           
-                              <Col md={4} className=" h-100 d-flex flex-column ">
+                              <Col lg={4} className=" h-100 d-flex flex-column ">
                                 <Media>
                                   <Media.Body>
                                   <img
@@ -873,7 +873,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
                               </Row> 
                               <br/>
 
-                              <Row className="justify-content-md-center" md={4}>
+                              <Row  lg={4}>
                               
 
                               </Row> 
