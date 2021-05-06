@@ -10,6 +10,7 @@ import Popup from "reactjs-popup";
 import cameraVideo from '@iconify/icons-clarity/video-camera-solid';
 import playPause0 from '@iconify/icons-gg/play-pause';
 import { Col, Row } from 'react-bootstrap';
+import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 
 
 class Player extends React.Component {
@@ -221,8 +222,13 @@ class Player extends React.Component {
             modal
             closeOnDocumentClick>
               <div className = "video">
-              <iframe src="https://embed.restream.io/player/index.html?token=8346f0289199979c2c0283ea75d30c16" width="100%" height="400px"  
-                   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame"></iframe>
+              {/* <iframe     src="https://player.twitch.tv/?channel=lemoniradio&parent=streamernews.example.com&muted=true"
+                      width="100%" height="400px"  
+                      allowfullscreen="true"
+                   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame"></iframe> */}
+<ReactTwitchEmbedVideo  channel="lemoniradio"   width="100%" height="400px"    allowfullscreen="true"
+                   allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame" />
+
 
               </div>
         </Popup>
