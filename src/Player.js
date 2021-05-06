@@ -219,6 +219,7 @@ class Player extends React.Component {
 
         <Popup trigger={<button className={this.state.twichcol} > <Icon icon={cameraVideo} width="30" height="30" /></button>}
             position="right center" 
+            className="videocontainer"
             modal
             closeOnDocumentClick>
               <div className = "video">
@@ -226,7 +227,7 @@ class Player extends React.Component {
                       width="100%" height="400px"  
                       allowfullscreen="true"
                    allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame"></iframe> */}
-<ReactTwitchEmbedVideo  channel="lemoniradio"   width="100%" height="400px"    allowfullscreen="true"
+                    <ReactTwitchEmbedVideo  channel="lemoniradio"   width="100%" height="400px"    allowfullscreen="true"
                    allowtransparency="yes" allow="autoplay" frameBorder="0" marginHeight="0" marginWidth="0" scrolling="yes" title="VideoFrame" />
 
 

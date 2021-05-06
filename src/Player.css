@@ -5,6 +5,9 @@
 .colplay{
     left: -7px !important;
 }
+.videocontainer{
+    width: 50%;
+}
 .video{
     background-color: transparent;
     border: none;
