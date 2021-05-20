@@ -449,13 +449,14 @@ changezone (){
                                                                            Music is Memory <br/> 
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           20:00 - 22:00 <br/>
-                                                                           The Blackout Show<br/>
-                                                                           </p>
-                                                                           <p style={{color:"#ec7323"}}> 
                                                                            22:00 - 00:00 <br/>
                                                                            The One with the Metal<br/>
                                                                            </p>
+                                                                           <p style={{color:"#ec7323"}}> 
+                                                                           20:00 - 22:00 <br/>
+                                                                           The Blackout Show<br/>
+                                                                           </p>
+
                                                                        </Col> 
                                    
                                    
@@ -480,10 +481,6 @@ changezone (){
                                                                            <p style={{color:"#5eb546"}}>
                                                                             11:00 - 12:00 <br/>
                                                                             Voix Multiculturelle <br/>
-                                                                           </p>
-                                                                           <p style={{color:"#76cdd9"}}> 
-                                                                           12:00 - 14:00 <br/>
-                                                                           Ρεμπέτικη Γεύση<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
                                                                            21:00 - 00:00 <br/>
@@ -1038,7 +1035,7 @@ Taste Of Rembetiko; with passion , authenticity and love for music.
             <Col  md={12} className = "px-0 ">
                 <footer className="App-footer">
                   <div className="footerText">
-                    <p style={{color:this.state.color2 }}>© 2020, Lemoni Radio </p>
+                    <p style={{color:this.state.color2 }}>© 2021, Lemoni Radio </p>
                   </div>        
                 </footer>
             </Col>
