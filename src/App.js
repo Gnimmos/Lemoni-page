@@ -449,11 +449,11 @@ changezone (){
                                                                            Music is Memory <br/> 
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           22:00 - 00:00 <br/>
+                                                                           20:00 - 22:00 <br/>
                                                                            The One with the Metal<br/>
                                                                            </p>
                                                                            <p style={{color:"#ec7323"}}> 
-                                                                           20:00 - 22:00 <br/>
+                                                                           22:00 - 00:00 <br/>
                                                                            The Blackout Show<br/>
                                                                            </p>
 
